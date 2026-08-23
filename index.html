@@ -7,9 +7,7 @@
 <title>Saba Nazir Ahmad | GIS, Remote Sensing & Earth Observation Researcher</title>
 
 <meta name="description" content="Saba Nazir Ahmad - GIS, Remote Sensing, Earth Observation, Cryosphere, Climate Hazards, GeoAI and Environmental Researcher from Pakistan.">
-
 <meta name="keywords" content="Saba Nazir Ahmad, GIS, Remote Sensing, Earth Observation, GeoAI, GLOF, Cryosphere, Climate Change, Geography, Pakistan">
-
 <meta name="author" content="Saba Nazir Ahmad">
 
 <style>
@@ -29,12 +27,12 @@
     --muted:#a9bacb;
     --primary:#45d9b4;
     --secondary:#56a8ff;
-    --border:rgba(255,255,255,0.09);
+    --border:rgba(255,255,255,.09);
     --shadow:0 20px 60px rgba(0,0,0,.28);
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     background:
         radial-gradient(circle at 10% 10%,rgba(69,217,180,.08),transparent 30%),
         radial-gradient(circle at 90% 20%,rgba(86,168,255,.08),transparent 30%),
@@ -58,7 +56,9 @@ img{
     margin:auto;
 }
 
-/* NAVIGATION */
+section{
+    padding:100px 0;
+}
 
 header{
     position:fixed;
@@ -66,7 +66,7 @@ header{
     left:0;
     width:100%;
     z-index:1000;
-    background:rgba(7,17,31,.9);
+    background:rgba(7,17,31,.92);
     backdrop-filter:blur(15px);
     border-bottom:1px solid var(--border);
 }
@@ -82,7 +82,6 @@ header{
 .logo{
     font-size:20px;
     font-weight:800;
-    color:#fff;
     white-space:nowrap;
 }
 
@@ -94,7 +93,7 @@ header{
     display:flex;
     flex-wrap:wrap;
     justify-content:flex-end;
-    gap:20px;
+    gap:18px;
     list-style:none;
 }
 
@@ -106,12 +105,6 @@ header{
 
 .nav-links a:hover{
     color:var(--primary);
-}
-
-/* GENERAL */
-
-section{
-    padding:100px 0;
 }
 
 .section-title{
@@ -276,6 +269,8 @@ section{
     margin-top:25px;
 }
 
+/* PROFILE PICTURE - HERO ONLY */
+
 .hero-photo{
     display:flex;
     justify-content:center;
@@ -402,7 +397,7 @@ section{
     color:var(--muted);
 }
 
-/* FEATURED RESEARCH */
+/* FEATURED */
 
 .featured{
     display:grid;
@@ -448,10 +443,9 @@ section{
     font-size:12px;
 }
 
-/* EDUCATION / EXPERIENCE */
+/* TIMELINE */
 
 .timeline{
-    position:relative;
     display:grid;
     gap:25px;
 }
@@ -479,6 +473,7 @@ section{
 
 .timeline-card p{
     color:var(--muted);
+    margin-bottom:8px;
 }
 
 .timeline-card ul{
@@ -493,7 +488,6 @@ section{
 /* PUBLICATIONS */
 
 .publication-card{
-    position:relative;
     height:100%;
 }
 
@@ -589,7 +583,7 @@ section{
 /* MEDIA */
 
 .media-card{
-    min-height:230px;
+    min-height:250px;
     display:flex;
     flex-direction:column;
     justify-content:center;
@@ -601,6 +595,62 @@ section{
 
 .media-card p{
     color:var(--muted);
+}
+
+/* PAKGEO MEDIA - NO WRONG IMAGE */
+
+.pakgeo-card{
+    min-height:250px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    position:relative;
+    overflow:hidden;
+}
+
+.pakgeo-card::before{
+    content:"";
+    position:absolute;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:rgba(69,217,180,.07);
+    right:-60px;
+    top:-60px;
+}
+
+.pakgeo-card::after{
+    content:"";
+    position:absolute;
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:rgba(86,168,255,.06);
+    left:-40px;
+    bottom:-40px;
+}
+
+.pakgeo-icon{
+    width:65px;
+    height:65px;
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+    background:rgba(69,217,180,.08);
+    border:1px solid rgba(69,217,180,.2);
+    margin-bottom:15px;
+    position:relative;
+    z-index:1;
+}
+
+.pakgeo-card h3,
+.pakgeo-card p,
+.pakgeo-card .project-label,
+.pakgeo-card .tags{
+    position:relative;
+    z-index:1;
 }
 
 /* SKILLS */
@@ -1022,7 +1072,8 @@ Contact Me
 </div>
 
 
-<!-- PROFILE PICTURE: HERO ONLY -->
+<!-- PROFILE PICTURE IS ONLY HERE -->
+
 <div class="hero-photo">
 
 <div class="profile-frame">
@@ -1116,7 +1167,6 @@ disaster risk reduction and sustainable environmental management.
 
 </div>
 
-
 <div class="card">
 
 <h3>Research Profile</h3>
@@ -1154,11 +1204,9 @@ disaster risk reduction and sustainable environmental management.
 </div>
 
 </div>
-
 </div>
 
 </div>
-
 </div>
 </section>
 
@@ -1241,7 +1289,6 @@ data-driven environmental modelling.
 </div>
 
 </div>
-
 </div>
 </section>
 
@@ -1289,7 +1336,6 @@ environmental datasets.
 </div>
 
 </div>
-
 </div>
 
 </div>
@@ -1338,7 +1384,6 @@ to Glacial Lake Outburst Floods (GLOFs) in Nagar Valley, Pakistan.
 
 </div>
 
-
 <div class="card timeline-card">
 
 <div class="timeline-date">2019 – 2023</div>
@@ -1369,7 +1414,6 @@ of Galiyat-Hazara, KPK, Pakistan.
 </div>
 
 </div>
-
 </div>
 </section>
 
@@ -1388,31 +1432,21 @@ of Galiyat-Hazara, KPK, Pakistan.
 <div class="timeline">
 
 <div class="card timeline-card">
-
 <div class="timeline-date">Dec 2025 – Jun 2026</div>
-
 <h3>Assistant Lecturer</h3>
-
 <h4>Superior Group of Colleges</h4>
-
 <ul>
 <li>Taught Geography, Environmental Sciences and Biology.</li>
 <li>Delivered foundational instruction in GIS, Remote Sensing, Physical Geography and Climatology.</li>
 <li>Supervised practical laboratory and field-based learning.</li>
 <li>Supported academic assessment and scientific communication.</li>
 </ul>
-
 </div>
 
-
 <div class="card timeline-card">
-
 <div class="timeline-date">Mar 2025 – Dec 2025</div>
-
 <h3>GIS Analyst & Researcher</h3>
-
 <h4>Zameen Developments</h4>
-
 <ul>
 <li>Conducted advanced GIS, Remote Sensing and Earth Observation analysis.</li>
 <li>Performed LULC mapping, change detection and DEM-based terrain analysis.</li>
@@ -1420,64 +1454,44 @@ of Galiyat-Hazara, KPK, Pakistan.
 <li>Processed satellite datasets and geospatial information.</li>
 <li>Used ArcGIS Pro, QGIS, GEE, ENVI and programming tools.</li>
 </ul>
-
 </div>
 
-
 <div class="card timeline-card">
-
 <div class="timeline-date">Jun 2025 – Nov 2025</div>
-
 <h3>Research Intern</h3>
-
 <h4>Chief Minister's Climate Leadership</h4>
-
 <ul>
 <li>Assisted with climate policy analysis and environmental governance.</li>
 <li>Contributed to climate resilience and Disaster Risk Reduction initiatives.</li>
 <li>Supported sustainability projects and environmental decision-making.</li>
 <li>Participated in stakeholder engagement and technical capacity building.</li>
 </ul>
-
 </div>
 
-
 <div class="card timeline-card">
-
 <div class="timeline-date">Jul 2024 – Sep 2025</div>
-
 <h3>GIS Analyst</h3>
-
 <h4>Sheher Saaz</h4>
-
 <ul>
 <li>Supported urban and spatial planning projects through GIS analysis.</li>
 <li>Prepared thematic maps and processed satellite datasets.</li>
 <li>Contributed to land-use assessment and planning support.</li>
 </ul>
-
 </div>
 
-
 <div class="card timeline-card">
-
 <div class="timeline-date">Jan 2024 – Dec 2024</div>
-
 <h3>GIS Analyst</h3>
-
 <h4>The Urban Unit</h4>
-
 <ul>
 <li>Performed GIS, Remote Sensing and spatial analysis for urban planning.</li>
 <li>Developed LULC maps and change-detection workflows.</li>
 <li>Conducted DEM-based terrain analysis and environmental assessment.</li>
 <li>Supported disaster risk management through geospatial analysis.</li>
 </ul>
-
 </div>
 
 </div>
-
 </div>
 </section>
 
@@ -1527,7 +1541,6 @@ View DOI →
 
 </div>
 
-
 <div class="card publication-card">
 
 <div class="pub-status">UNDER REVIEW · 2026</div>
@@ -1553,7 +1566,6 @@ and Earth Observation data.
 
 </div>
 
-
 <div class="card publication-card">
 
 <div class="pub-status">MPHIL RESEARCH · 2026</div>
@@ -1574,7 +1586,6 @@ to assess GLOF susceptibility and community adaptation.
 </div>
 
 </div>
-
 </div>
 </section>
 
@@ -1593,56 +1604,38 @@ to assess GLOF susceptibility and community adaptation.
 <div class="grid-2">
 
 <div class="card">
-
 <div class="research-icon">🌐</div>
-
 <h3>4th International Online Conference on Materials — IOCM 2025</h3>
-
-<p class="text-muted">
-<strong>MDPI Sciforum · November 2025</strong>
-</p>
-
+<p class="text-muted"><strong>MDPI Sciforum · November 2025</strong></p>
 <p class="text-muted">
 Presented research on Artificial Intelligence and Geospatial Simulation
 for Sustainable Materials and Environmental Applications.
 </p>
-
 <a class="btn btn-outline"
 href="https://sciforum.net/event/IOCM2025"
 target="_blank"
 rel="noopener">
 Conference →
 </a>
-
 </div>
 
-
 <div class="card">
-
 <div class="research-icon">🎤</div>
-
 <h3>2nd International Online Conference on Functional Biomaterials — IOCFB 2026</h3>
-
-<p class="text-muted">
-<strong>MDPI Sciforum · July 2026 · Oral Presentation</strong>
-</p>
-
+<p class="text-muted"><strong>MDPI Sciforum · July 2026 · Oral Presentation</strong></p>
 <p class="text-muted">
 Presented “Artificial Intelligence and Geospatial Simulation for
 Sustainable Materials and Environmental Applications.”
 </p>
-
 <a class="btn btn-outline"
 href="https://sciforum.net/event/IOCFB2026"
 target="_blank"
 rel="noopener">
 Conference →
 </a>
-
 </div>
 
 </div>
-
 </div>
 </section>
 
@@ -1689,6 +1682,8 @@ Gilgit-Baltistan.
 </div>
 </div>
 
+
+<!-- PAKGEO PROJECT HAS NO IMAGE -->
 
 <div class="card project-card">
 
@@ -1829,7 +1824,6 @@ terrain-based geospatial research and environmental modelling.
 </div>
 
 </div>
-
 </div>
 </section>
 
@@ -1860,7 +1854,6 @@ alt="Flood Risk Zonation Map">
 </div>
 </div>
 
-
 <div class="card map-card">
 <img src="Location%20Map%20of%20Hunza.jpg"
 alt="Location Map of Hunza">
@@ -1869,7 +1862,6 @@ alt="Location Map of Hunza">
 <p>Geospatial representation of the mountain study environment.</p>
 </div>
 </div>
-
 
 <div class="card map-card">
 <img src="Elevation%20Map%20of%20Hunza.jpg"
@@ -1880,7 +1872,6 @@ alt="Elevation Map of Hunza">
 </div>
 </div>
 
-
 <div class="card map-card">
 <img src="Spatial-temporal%20change%20of%20LULC.jpg"
 alt="Spatial Temporal LULC Change">
@@ -1889,7 +1880,6 @@ alt="Spatial Temporal LULC Change">
 <p>Land-use and land-cover change assessment.</p>
 </div>
 </div>
-
 
 <div class="card map-card">
 <img src="Normalized%20Difference%20Vegetation%20Index.jpg"
@@ -1900,7 +1890,6 @@ alt="NDVI Analysis">
 </div>
 </div>
 
-
 <div class="card map-card">
 <img src="Normalized%20Difference%20Built-up%20area%20Index.jpg"
 alt="Built-up Area Analysis">
@@ -1910,7 +1899,6 @@ alt="Built-up Area Analysis">
 </div>
 </div>
 
-
 <div class="card map-card">
 <img src="NDVI%20Classification%20Map%20of%20Gujranwala.png"
 alt="NDVI Classification Gujranwala">
@@ -1919,7 +1907,6 @@ alt="NDVI Classification Gujranwala">
 <p>Classification of vegetation conditions for environmental analysis.</p>
 </div>
 </div>
-
 
 <div class="card map-card">
 <img src="Rainfall%20analysis.png"
@@ -1931,7 +1918,6 @@ alt="Rainfall Analysis">
 </div>
 
 </div>
-
 </div>
 </section>
 
@@ -2004,8 +1990,7 @@ View Visual →
 <h3>Environmental Research Visual</h3>
 
 <p>
-Earth Observation visualization supporting environmental
-change research.
+Earth Observation visualization supporting environmental change research.
 </p>
 
 <a class="insight-link"
@@ -2017,18 +2002,29 @@ View Visual →
 </div>
 
 
-<div class="card media-card">
+<!-- CORRECTED PAKGEO MEDIA CARD: NO IMAGE -->
 
-<div class="research-icon">🛰️</div>
+<div class="card pakgeo-card">
 
-<div class="insight-label">GEOAI • GIS • PAKISTAN</div>
+<div class="pakgeo-icon">🛰️</div>
+
+<div class="project-label">
+GEOAI • GIS • PAKISTAN
+</div>
 
 <h3>PakGeo Research Media</h3>
 
 <p>
-AI-powered geospatial intelligence visualization focused
-on Pakistan's LULC and spatial information.
+AI-powered geospatial intelligence visualization focused on
+Pakistan's LULC and spatial information.
 </p>
+
+<div class="tags">
+<span>GeoAI</span>
+<span>GIS</span>
+<span>LULC</span>
+<span>Pakistan</span>
+</div>
 
 </div>
 
@@ -2068,7 +2064,6 @@ Earth Observation, environmental modelling and scientific analysis.
 </div>
 </div>
 
-
 <div class="card skill-card">
 <h3>🛰️ Remote Sensing</h3>
 <div class="skill-list">
@@ -2082,7 +2077,6 @@ Earth Observation, environmental modelling and scientific analysis.
 </div>
 </div>
 
-
 <div class="card skill-card">
 <h3>🌐 Google Earth Engine</h3>
 <div class="skill-list">
@@ -2093,7 +2087,6 @@ Earth Observation, environmental modelling and scientific analysis.
 <span>Environmental Monitoring</span>
 </div>
 </div>
-
 
 <div class="card skill-card">
 <h3>💻 Programming & Data</h3>
@@ -2109,7 +2102,6 @@ Earth Observation, environmental modelling and scientific analysis.
 </div>
 </div>
 
-
 <div class="card skill-card">
 <h3>📊 Spatial Modelling</h3>
 <div class="skill-list">
@@ -2121,7 +2113,6 @@ Earth Observation, environmental modelling and scientific analysis.
 <span>Terrain Modelling</span>
 </div>
 </div>
-
 
 <div class="card skill-card">
 <h3>🌍 Environmental Analysis</h3>
@@ -2135,7 +2126,6 @@ Earth Observation, environmental modelling and scientific analysis.
 </div>
 </div>
 
-
 <div class="card skill-card">
 <h3>🤖 GeoAI & Machine Learning</h3>
 <div class="skill-list">
@@ -2148,7 +2138,6 @@ Earth Observation, environmental modelling and scientific analysis.
 </div>
 </div>
 
-
 <div class="card skill-card">
 <h3>🔬 Research</h3>
 <div class="skill-list">
@@ -2159,7 +2148,6 @@ Earth Observation, environmental modelling and scientific analysis.
 <span>Research Collaboration</span>
 </div>
 </div>
-
 
 <div class="card skill-card">
 <h3>💡 Professional</h3>
@@ -2173,7 +2161,6 @@ Earth Observation, environmental modelling and scientific analysis.
 </div>
 
 </div>
-
 </div>
 </section>
 
@@ -2218,7 +2205,6 @@ International scientific presentations through MDPI Sciforum conferences.
 </div>
 
 </div>
-
 </div>
 </section>
 
@@ -2296,7 +2282,6 @@ for environmental monitoring.
 
 </div>
 
-
 <div class="card" style="margin-top:30px;text-align:center;">
 
 <h3 style="font-size:28px;margin-bottom:15px;">
@@ -2326,7 +2311,7 @@ reduction and sustainable environmental management.
 </section>
 
 
-<!-- ==================== INSIGHTS ==================== -->
+<!-- ==================== RESEARCH INSIGHTS ==================== -->
 
 <section>
 
@@ -2364,7 +2349,6 @@ View Map →
 
 </div>
 
-
 <div class="card insight-card">
 
 <div class="insight-label">
@@ -2385,7 +2369,6 @@ View Research →
 </a>
 
 </div>
-
 
 <div class="card insight-card">
 
@@ -2409,7 +2392,6 @@ View Analysis →
 </div>
 
 </div>
-
 </div>
 </section>
 
@@ -2463,7 +2445,6 @@ sustainable development.
 </div>
 
 </div>
-
 </div>
 </section>
 
@@ -2482,63 +2463,39 @@ sustainable development.
 <div class="grid-3">
 
 <div class="card reference-card">
-
 <h3>👩‍🏫 Prof. Sumaira Kausar</h3>
-
-<div class="reference-role">
-Professor of Geography
-</div>
-
+<div class="reference-role">Professor of Geography</div>
 <p>University of the Punjab</p>
 <p>MPhil Thesis Supervisor</p>
-
 <a class="reference-email"
 href="mailto:sumaira.geog@pu.edu.pk">
 Professional Email
 </a>
-
 </div>
-
 
 <div class="card reference-card">
-
 <h3>👨‍🏫 Prof. Safdar Shirazi</h3>
-
-<div class="reference-role">
-Head of the Institute of Geography
-</div>
-
+<div class="reference-role">Head of the Institute of Geography</div>
 <p>University of the Punjab</p>
 <p>Academic Reference</p>
-
 <a class="reference-email"
 href="mailto:shirazi.geog@pu.edu.pk">
 Professional Email
 </a>
-
 </div>
-
 
 <div class="card reference-card">
-
 <h3>🔬 Dr. Muhammad Nasar-u-Minallah</h3>
-
-<div class="reference-role">
-Professor of Geography
-</div>
-
+<div class="reference-role">Professor of Geography</div>
 <p>University of the Punjab</p>
 <p>Cryosphere & Climate Research</p>
-
 <a class="reference-email"
 href="mailto:nasar-u-minallah.geog@pu.edu.pk">
 Professional Email
 </a>
-
 </div>
 
 </div>
-
 </div>
 </section>
 
@@ -2574,7 +2531,6 @@ risk reduction.
 <span>Climate Research</span>
 <span>Environmental Projects</span>
 </div>
-
 
 <h3 style="margin-top:30px;margin-bottom:15px;">
 Contact Me
@@ -2615,7 +2571,6 @@ rel="noopener">
 </p>
 
 </div>
-
 </div>
 </section>
 
@@ -2657,7 +2612,6 @@ style="text-align:center;margin-top:25px;padding-top:20px;border-top:1px solid v
 </div>
 
 </footer>
-
 
 </body>
 </html>
