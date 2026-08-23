@@ -4,13 +4,30 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Saba Nazir Ahmad | GIS, Remote Sensing & Earth Observation Researcher</title>
+<title>Saba Nazir Ahmad | GIS, Remote Sensing & Earth Observation</title>
 
-<meta name="description" content="Saba Nazir Ahmad — GIS, Remote Sensing, Earth Observation, Climate Hazards, Cryosphere, GeoAI and Environmental Researcher.">
+<meta name="description" content="Saba Nazir Ahmad — GIS, Remote Sensing, Earth Observation, Climate Hazards, Cryosphere, GLOFs, GeoAI and Environmental Researcher.">
 
-<meta name="keywords" content="Saba Nazir Ahmad, GIS, Remote Sensing, Earth Observation, GeoAI, GLOF, Climate Hazards, Cryosphere, Geography, Pakistan">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
+:root{
+    --primary:#5b21b6;
+    --secondary:#0ea5e9;
+    --cyan:#06b6d4;
+    --green:#10b981;
+    --pink:#ec4899;
+    --orange:#f97316;
+    --dark:#111827;
+    --muted:#64748b;
+    --light:#f8fafc;
+    --white:#ffffff;
+    --border:#e2e8f0;
+    --shadow:0 20px 50px rgba(15,23,42,.10);
+    --radius:22px;
+}
 
 *{
     margin:0;
@@ -19,25 +36,10 @@
     scroll-behavior:smooth;
 }
 
-:root{
-    --primary:#0f766e;
-    --secondary:#2563eb;
-    --accent:#06b6d4;
-    --purple:#7c3aed;
-    --green:#16a34a;
-    --orange:#f97316;
-    --dark:#0f172a;
-    --text:#334155;
-    --light:#f8fafc;
-    --white:#ffffff;
-    --border:#e2e8f0;
-    --shadow:0 15px 40px rgba(15,23,42,.10);
-}
-
 body{
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:"Inter",sans-serif;
     background:#f8fafc;
-    color:var(--text);
+    color:var(--dark);
     line-height:1.7;
 }
 
@@ -52,55 +54,83 @@ img{
 }
 
 .container{
-    width:90%;
-    max-width:1200px;
+    width:min(1180px,92%);
     margin:auto;
 }
 
-/* ================= NAVBAR ================= */
+section{
+    padding:95px 0;
+}
 
-nav{
+.section-label{
+    display:inline-block;
+    padding:8px 15px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#ede9fe,#cffafe);
+    color:#5b21b6;
+    font-size:13px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:15px;
+}
+
+.section-title{
+    font-family:"Playfair Display",serif;
+    font-size:clamp(34px,5vw,50px);
+    line-height:1.15;
+    margin-bottom:16px;
+}
+
+.section-intro{
+    max-width:760px;
+    color:var(--muted);
+    font-size:17px;
+    margin-bottom:45px;
+}
+
+/* NAVBAR */
+
+header{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    background:rgba(255,255,255,.96);
-    backdrop-filter:blur(12px);
     z-index:999;
-    border-bottom:1px solid var(--border);
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(226,232,240,.8);
 }
 
-.nav-container{
-    max-width:1250px;
-    width:92%;
-    margin:auto;
-    min-height:72px;
+.navbar{
+    min-height:75px;
     display:flex;
     align-items:center;
     justify-content:space-between;
+    gap:20px;
 }
 
 .logo{
-    font-size:23px;
-    font-weight:800;
-    color:var(--dark);
+    font-size:22px;
+    font-weight:900;
+    color:var(--primary);
 }
 
 .logo span{
-    color:var(--primary);
+    color:var(--dark);
 }
 
 .nav-links{
     display:flex;
-    gap:22px;
+    gap:23px;
     list-style:none;
     align-items:center;
 }
 
 .nav-links a{
-    font-size:14px;
-    font-weight:600;
-    color:#475569;
+    font-size:13px;
+    font-weight:700;
+    color:#334155;
     transition:.3s;
 }
 
@@ -110,21 +140,26 @@ nav{
 
 .menu-btn{
     display:none;
-    font-size:28px;
-    cursor:pointer;
+    border:0;
+    background:#ede9fe;
+    color:var(--primary);
+    padding:9px 13px;
+    border-radius:10px;
+    font-size:20px;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero{
     min-height:100vh;
-    padding:130px 0 80px;
+    padding-top:140px;
+    padding-bottom:70px;
     background:
-    radial-gradient(circle at 10% 20%,rgba(6,182,212,.15),transparent 30%),
-    radial-gradient(circle at 90% 20%,rgba(124,58,237,.14),transparent 30%),
-    linear-gradient(135deg,#f8fafc,#ecfeff);
-    display:flex;
-    align-items:center;
+    radial-gradient(circle at 10% 20%,rgba(139,92,246,.20),transparent 30%),
+    radial-gradient(circle at 90% 20%,rgba(14,165,233,.20),transparent 30%),
+    radial-gradient(circle at 80% 90%,rgba(236,72,153,.15),transparent 25%),
+    #f8fafc;
+    overflow:hidden;
 }
 
 .hero-grid{
@@ -134,404 +169,395 @@ nav{
     align-items:center;
 }
 
-.badge{
-    display:inline-block;
-    padding:9px 17px;
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#fff;
+    padding:9px 15px;
     border-radius:50px;
-    background:#dff7f5;
-    color:#0f766e;
-    font-weight:700;
-    font-size:14px;
-    margin-bottom:20px;
+    box-shadow:0 10px 30px rgba(91,33,182,.10);
+    color:var(--primary);
+    font-size:13px;
+    font-weight:800;
+    margin-bottom:22px;
 }
 
 .hero h1{
-    font-size:58px;
-    line-height:1.05;
-    color:var(--dark);
-    margin-bottom:18px;
+    font-family:"Playfair Display",serif;
+    font-size:clamp(48px,7vw,78px);
+    line-height:1.02;
+    margin-bottom:20px;
 }
 
-.hero h1 span{
-    color:var(--primary);
+.gradient-text{
+    background:linear-gradient(90deg,#5b21b6,#0ea5e9,#ec4899);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
 .hero h2{
-    font-size:25px;
-    color:#334155;
+    font-size:clamp(20px,3vw,30px);
     margin-bottom:18px;
+    color:#334155;
 }
 
 .hero p{
-    font-size:17px;
     max-width:720px;
-    margin-bottom:25px;
+    color:var(--muted);
+    font-size:17px;
 }
 
 .hero-tags{
     display:flex;
     flex-wrap:wrap;
-    gap:9px;
-    margin:20px 0 28px;
+    gap:10px;
+    margin:25px 0;
 }
 
 .tag{
+    padding:8px 13px;
+    border-radius:50px;
     background:white;
-    border:1px solid #cbd5e1;
-    padding:7px 13px;
-    border-radius:30px;
-    font-size:13px;
-    font-weight:600;
+    border:1px solid var(--border);
+    font-size:12px;
+    font-weight:700;
+    color:#475569;
 }
 
-.buttons{
+.hero-buttons{
     display:flex;
-    gap:12px;
     flex-wrap:wrap;
+    gap:13px;
+    margin-top:28px;
 }
 
 .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
     padding:13px 20px;
-    border-radius:10px;
-    font-weight:700;
-    display:inline-block;
+    border-radius:13px;
+    font-size:14px;
+    font-weight:800;
     transition:.3s;
-    border:2px solid transparent;
 }
 
 .btn-primary{
-    background:var(--primary);
     color:white;
+    background:linear-gradient(135deg,#5b21b6,#7c3aed,#0ea5e9);
+    box-shadow:0 12px 25px rgba(91,33,182,.25);
 }
 
-.btn-primary:hover{
-    transform:translateY(-3px);
-    box-shadow:0 10px 25px rgba(15,118,110,.25);
-}
-
-.btn-outline{
-    border-color:var(--primary);
-    color:var(--primary);
+.btn-secondary{
     background:white;
+    border:1px solid var(--border);
 }
 
-.btn-outline:hover{
-    background:var(--primary);
-    color:white;
+.btn:hover{
+    transform:translateY(-3px);
 }
 
-/* PROFILE PHOTO */
-
-.profile-area{
+.profile-wrap{
+    position:relative;
     display:flex;
     justify-content:center;
 }
 
 .profile-card{
-    width:350px;
-    background:white;
-    padding:15px;
-    border-radius:28px;
-    box-shadow:var(--shadow);
+    width:min(390px,100%);
+    padding:14px;
+    background:linear-gradient(145deg,#7c3aed,#06b6d4,#ec4899);
+    border-radius:35px;
+    box-shadow:0 30px 70px rgba(91,33,182,.25);
     transform:rotate(2deg);
 }
 
 .profile-card img{
     width:100%;
-    height:430px;
+    aspect-ratio:1/1.08;
     object-fit:cover;
-    border-radius:20px;
+    border-radius:25px;
+    background:white;
 }
 
 .profile-caption{
-    padding:17px 10px 8px;
-    text-align:center;
-}
-
-.profile-caption h3{
-    color:var(--dark);
-    font-size:21px;
-}
-
-.profile-caption p{
-    color:#64748b;
-    font-size:14px;
-}
-
-/* ================= SECTIONS ================= */
-
-section{
-    padding:90px 0;
-}
-
-.section-head{
-    text-align:center;
-    max-width:800px;
-    margin:0 auto 50px;
-}
-
-.section-label{
-    color:var(--primary);
-    font-weight:800;
-    text-transform:uppercase;
-    letter-spacing:2px;
-    font-size:13px;
-}
-
-.section-head h2{
-    font-size:40px;
-    color:var(--dark);
-    margin:8px 0 12px;
-}
-
-.section-head p{
-    color:#64748b;
-}
-
-/* ================= ABOUT ================= */
-
-.about-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:30px;
-}
-
-.card{
+    position:absolute;
+    bottom:-25px;
+    left:10px;
     background:white;
-    border:1px solid var(--border);
-    border-radius:20px;
-    padding:30px;
-    box-shadow:0 8px 25px rgba(15,23,42,.05);
-}
-
-.card h3{
-    color:var(--dark);
-    margin-bottom:12px;
-}
-
-.about-info{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-    margin-top:20px;
-}
-
-.info-box{
-    padding:18px;
-    background:#f8fafc;
-    border-radius:13px;
-    border-left:4px solid var(--primary);
-}
-
-.info-box strong{
-    display:block;
-    color:var(--dark);
-}
-
-/* ================= RESEARCH ================= */
-
-.research-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
-
-.research-card{
-    background:white;
-    padding:28px;
-    border-radius:20px;
-    border:1px solid var(--border);
-    transition:.3s;
-}
-
-.research-card:hover{
-    transform:translateY(-7px);
+    padding:14px 18px;
+    border-radius:16px;
     box-shadow:var(--shadow);
-}
-
-.icon{
-    font-size:35px;
-    margin-bottom:12px;
-}
-
-.research-card h3{
-    color:var(--dark);
-    margin-bottom:10px;
-}
-
-/* FEATURED RESEARCH */
-
-.featured{
-    margin-top:30px;
-    background:linear-gradient(135deg,#ecfeff,#eff6ff);
-    border:1px solid #bae6fd;
-    border-radius:25px;
-    padding:35px;
-}
-
-.featured h3{
-    font-size:27px;
-    color:var(--dark);
-}
-
-.featured-tags{
-    display:flex;
-    flex-wrap:wrap;
-    gap:8px;
-    margin-top:20px;
-}
-
-.small-tag{
-    background:white;
-    padding:7px 12px;
-    border-radius:20px;
     font-size:13px;
-    font-weight:700;
+    font-weight:800;
 }
 
-/* ================= STATS ================= */
+/* STATS */
 
 .stats{
+    margin-top:60px;
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:18px;
-    margin-top:35px;
+    gap:16px;
 }
 
 .stat{
     background:white;
     padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 35px rgba(15,23,42,.06);
     text-align:center;
-    border-radius:18px;
-    border:1px solid var(--border);
 }
 
 .stat strong{
     display:block;
-    font-size:35px;
+    font-size:30px;
     color:var(--primary);
 }
 
 .stat span{
-    color:#64748b;
+    color:var(--muted);
+    font-size:12px;
+    font-weight:700;
 }
 
-/* ================= TIMELINE ================= */
+/* CARDS */
 
-.timeline{
-    max-width:950px;
-    margin:auto;
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:24px;
 }
 
-.timeline-item{
+.card{
     background:white;
+    border:1px solid var(--border);
+    border-radius:var(--radius);
     padding:28px;
-    margin-bottom:20px;
-    border-radius:18px;
-    border-left:5px solid var(--primary);
-    box-shadow:0 8px 25px rgba(15,23,42,.05);
+    box-shadow:0 10px 35px rgba(15,23,42,.05);
+    transition:.35s;
 }
 
-.timeline-date{
-    color:var(--primary);
-    font-weight:800;
+.card:hover{
+    transform:translateY(-7px);
+    box-shadow:var(--shadow);
+}
+
+.card-icon{
+    width:52px;
+    height:52px;
+    display:grid;
+    place-items:center;
+    border-radius:15px;
+    background:linear-gradient(135deg,#ede9fe,#cffafe);
+    font-size:25px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    font-size:20px;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:var(--muted);
     font-size:14px;
 }
 
+/* ABOUT */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:45px;
+    align-items:center;
+}
+
+.about-photo{
+    padding:10px;
+    border-radius:30px;
+    background:linear-gradient(135deg,#ec4899,#7c3aed,#06b6d4);
+}
+
+.about-photo img{
+    border-radius:22px;
+    width:100%;
+    aspect-ratio:1/1.1;
+    object-fit:cover;
+}
+
+.info-list{
+    display:grid;
+    gap:12px;
+    margin-top:25px;
+}
+
+.info{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    padding:13px 0;
+    border-bottom:1px solid var(--border);
+}
+
+.info b{
+    color:#334155;
+}
+
+/* TIMELINE */
+
+.timeline{
+    position:relative;
+    display:grid;
+    gap:25px;
+}
+
+.timeline-item{
+    position:relative;
+    background:white;
+    border:1px solid var(--border);
+    border-left:5px solid var(--primary);
+    border-radius:18px;
+    padding:28px;
+    box-shadow:0 10px 30px rgba(15,23,42,.05);
+}
+
+.timeline-item:nth-child(2){
+    border-left-color:var(--cyan);
+}
+
+.timeline-item:nth-child(3){
+    border-left-color:var(--pink);
+}
+
+.timeline-item:nth-child(4){
+    border-left-color:var(--green);
+}
+
+.timeline-item:nth-child(5){
+    border-left-color:var(--orange);
+}
+
+.date{
+    color:var(--primary);
+    font-size:12px;
+    font-weight:900;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
 .timeline-item h3{
-    color:var(--dark);
-    margin:5px 0;
+    font-size:22px;
+    margin:6px 0;
 }
 
 .timeline-item h4{
-    color:#64748b;
+    color:#475569;
     margin-bottom:12px;
 }
 
 .timeline-item ul{
     padding-left:20px;
+    color:var(--muted);
+    font-size:14px;
 }
 
-/* ================= PUBLICATIONS ================= */
+/* PUBLICATIONS */
 
-.publication{
+.pub-card{
+    display:grid;
+    grid-template-columns:250px 1fr;
+    gap:25px;
     background:white;
-    padding:28px;
-    border-radius:20px;
+    padding:20px;
+    border-radius:22px;
     border:1px solid var(--border);
-    margin-bottom:20px;
+    margin-bottom:22px;
+    box-shadow:0 10px 35px rgba(15,23,42,.05);
 }
 
-.pub-year{
+.pub-image{
+    height:190px;
+    border-radius:16px;
+    object-fit:cover;
+    width:100%;
+    background:#e2e8f0;
+}
+
+.status{
     display:inline-block;
+    padding:5px 10px;
+    border-radius:50px;
     background:#dcfce7;
     color:#166534;
-    padding:5px 12px;
-    border-radius:20px;
-    font-weight:700;
-    font-size:13px;
+    font-size:11px;
+    font-weight:800;
+    margin-bottom:10px;
 }
 
-.publication h3{
-    color:var(--dark);
-    margin:12px 0 8px;
+.pub-card h3{
+    font-size:20px;
+    line-height:1.35;
+    margin-bottom:9px;
 }
 
-.publication em{
-    color:#64748b;
+.pub-card p{
+    color:var(--muted);
+    font-size:14px;
 }
 
-.pub-link{
-    display:inline-block;
-    margin-top:12px;
-    color:var(--secondary);
-    font-weight:700;
-}
-
-/* ================= PROJECTS ================= */
-
-.project-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
-}
+/* PROJECTS */
 
 .project{
-    background:white;
-    padding:30px;
-    border-radius:20px;
-    border:1px solid var(--border);
-    transition:.3s;
+    padding:0;
+    overflow:hidden;
 }
 
-.project:hover{
-    transform:translateY(-6px);
-    box-shadow:var(--shadow);
+.project-image{
+    height:210px;
+    width:100%;
+    object-fit:cover;
 }
 
-.project h3{
-    color:var(--dark);
-    margin:10px 0;
+.project-content{
+    padding:25px;
 }
 
-.project-icon{
-    font-size:38px;
+.project-content h3{
+    font-size:20px;
+    margin-bottom:10px;
 }
 
-/* ================= MAPS ================= */
-
-.maps-grid{
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:25px;
+.project-content p{
+    color:var(--muted);
+    font-size:14px;
 }
+
+.project-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin-top:17px;
+}
+
+.project-tags span{
+    background:#f1f5f9;
+    padding:5px 9px;
+    border-radius:8px;
+    font-size:11px;
+    font-weight:700;
+}
+
+/* MAPS */
 
 .map-card{
     background:white;
-    border-radius:20px;
+    border-radius:22px;
     overflow:hidden;
     border:1px solid var(--border);
-    box-shadow:0 8px 25px rgba(15,23,42,.06);
+    box-shadow:0 10px 35px rgba(15,23,42,.06);
     transition:.3s;
 }
 
@@ -541,178 +567,117 @@ section{
 
 .map-card img{
     width:100%;
-    height:300px;
+    height:245px;
     object-fit:cover;
 }
 
-.map-content{
+.map-body{
     padding:22px;
 }
 
-.map-content h3{
-    color:var(--dark);
-    margin-bottom:8px;
+.map-body h3{
+    margin-bottom:7px;
 }
 
-.map-content a{
-    color:var(--secondary);
-    font-weight:700;
+.map-body p{
+    color:var(--muted);
+    font-size:13px;
 }
 
-/* ================= SKILLS ================= */
-
-.skills-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
+/* SKILLS */
 
 .skill-card{
+    padding:26px;
     background:white;
+    border-radius:20px;
     border:1px solid var(--border);
-    border-radius:18px;
-    padding:25px;
-    transition:.3s;
-    position:relative;
-    overflow:hidden;
-}
-
-.skill-card:hover{
-    transform:translateY(-7px);
-    box-shadow:var(--shadow);
-}
-
-.skill-card:before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:4px;
-    background:linear-gradient(90deg,var(--primary),var(--secondary),var(--purple));
 }
 
 .skill-card h3{
-    color:var(--dark);
-    margin-bottom:10px;
+    margin-bottom:12px;
+    color:#334155;
 }
 
-.skill-card p{
-    font-size:14px;
-    color:#64748b;
-}
-
-.skill-links{
+.skill-list{
     display:flex;
     flex-wrap:wrap;
-    gap:7px;
-    margin-top:15px;
+    gap:8px;
 }
 
-.skill-links a{
-    background:#f1f5f9;
-    padding:6px 10px;
-    border-radius:15px;
+.skill-list span{
+    padding:7px 11px;
+    border-radius:9px;
+    background:linear-gradient(135deg,#f1f5f9,#eef2ff);
+    color:#475569;
     font-size:12px;
-    color:var(--secondary);
     font-weight:700;
 }
 
-.skill-links a:hover{
-    background:var(--secondary);
-    color:white;
+/* BLOG */
+
+.blog-card{
+    overflow:hidden;
+    padding:0;
 }
 
-/* ================= CERTIFICATIONS ================= */
-
-.cert-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
+.blog-card img{
+    width:100%;
+    height:210px;
+    object-fit:cover;
 }
 
-.cert{
-    background:white;
+.blog-content{
     padding:25px;
-    border-radius:18px;
-    border:1px solid var(--border);
 }
 
-/* ================= FUTURE ================= */
-
-.future-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+.blog-date{
+    font-size:11px;
+    font-weight:800;
+    color:var(--pink);
 }
 
-.future{
-    padding:25px;
-    border-radius:18px;
-    background:linear-gradient(135deg,#ffffff,#f0fdfa);
-    border:1px solid #ccfbf1;
+.blog-content h3{
+    margin:8px 0;
+    font-size:20px;
 }
 
-.future h3{
-    color:var(--dark);
-    margin-bottom:8px;
+.blog-content p{
+    color:var(--muted);
+    font-size:14px;
 }
 
-/* ================= BLOG ================= */
+/* AWARDS */
 
-.blog-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
-
-.blog{
+.award{
     background:white;
-    border:1px solid var(--border);
     border-radius:20px;
     padding:25px;
-}
-
-.blog span{
-    color:var(--primary);
-    font-size:13px;
-    font-weight:700;
-}
-
-.blog h3{
-    color:var(--dark);
-    margin:10px 0;
-}
-
-/* ================= REFERENCES ================= */
-
-.reference-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.reference{
-    background:white;
-    padding:25px;
-    border-radius:18px;
     border:1px solid var(--border);
+    box-shadow:0 10px 30px rgba(15,23,42,.05);
 }
 
-.reference h3{
-    color:var(--dark);
+.award-icon{
+    font-size:32px;
+    margin-bottom:12px;
 }
 
-/* ================= CONTACT ================= */
+/* CONTACT */
 
 .contact{
-    background:linear-gradient(135deg,#0f172a,#164e63);
+    background:
+    radial-gradient(circle at 10% 20%,rgba(139,92,246,.5),transparent 30%),
+    radial-gradient(circle at 90% 80%,rgba(6,182,212,.4),transparent 30%),
+    linear-gradient(135deg,#111827,#312e81);
     color:white;
 }
 
-.contact .section-head h2,
-.contact .section-head p{
+.contact .section-label{
+    background:rgba(255,255,255,.15);
     color:white;
+}
+
+.contact .section-intro{
+    color:#cbd5e1;
 }
 
 .contact-grid{
@@ -722,65 +687,71 @@ section{
 }
 
 .contact-card{
-    background:rgba(255,255,255,.08);
+    background:rgba(255,255,255,.10);
     border:1px solid rgba(255,255,255,.15);
-    border-radius:20px;
     padding:30px;
+    border-radius:24px;
+    backdrop-filter:blur(10px);
 }
 
-.contact-card h3{
-    margin-bottom:15px;
-}
-
-.contact-links{
+.contact-item{
     display:flex;
-    flex-direction:column;
-    gap:12px;
+    align-items:center;
+    gap:15px;
+    padding:14px 0;
+    border-bottom:1px solid rgba(255,255,255,.12);
 }
 
-.contact-links a{
-    background:rgba(255,255,255,.1);
-    padding:13px 16px;
-    border-radius:10px;
-    transition:.3s;
+.contact-icon{
+    width:42px;
+    height:42px;
+    border-radius:12px;
+    background:rgba(255,255,255,.15);
+    display:grid;
+    place-items:center;
 }
 
-.contact-links a:hover{
-    background:white;
-    color:var(--dark);
-}
-
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 footer{
-    background:#020617;
+    background:#0b1120;
     color:#94a3b8;
-    padding:30px 0;
-    text-align:center;
+    padding:35px 0;
 }
 
-.footer-links{
+.footer-grid{
     display:flex;
-    justify-content:center;
+    justify-content:space-between;
     gap:20px;
-    margin-bottom:12px;
+    align-items:center;
 }
 
-.footer-links a:hover{
+.socials{
+    display:flex;
+    gap:10px;
+}
+
+.socials a{
+    width:38px;
+    height:38px;
+    display:grid;
+    place-items:center;
+    background:#1e293b;
+    border-radius:10px;
     color:white;
+    font-size:14px;
 }
 
-/* ================= RESPONSIVE ================= */
+/* RESPONSIVE */
 
-@media(max-width:1000px){
-
+@media(max-width:950px){
     .nav-links{
+        display:none;
         position:absolute;
-        top:72px;
-        right:0;
+        top:75px;
+        left:0;
         width:100%;
         background:white;
-        display:none;
         flex-direction:column;
         padding:25px;
         border-bottom:1px solid var(--border);
@@ -800,86 +771,67 @@ footer{
         grid-template-columns:1fr;
     }
 
-    .hero{
-        text-align:center;
+    .profile-wrap{
+        order:-1;
     }
 
-    .hero-tags,
-    .buttons{
-        justify-content:center;
-    }
-
-    .profile-area{
-        margin-top:20px;
-    }
-
-    .research-grid,
-    .skills-grid,
-    .cert-grid{
+    .grid{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .maps-grid,
-    .project-grid,
-    .future-grid,
-    .blog-grid,
-    .reference-grid{
-        grid-template-columns:1fr 1fr;
+    .stats{
+        grid-template-columns:repeat(2,1fr);
     }
 }
 
 @media(max-width:650px){
+    section{
+        padding:70px 0;
+    }
+
+    .hero{
+        padding-top:120px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .pub-card{
+        grid-template-columns:1fr;
+    }
+
+    .pub-image{
+        height:220px;
+    }
+
+    .footer-grid{
+        flex-direction:column;
+        text-align:center;
+    }
 
     .hero h1{
-        font-size:40px;
-    }
-
-    .hero h2{
-        font-size:20px;
-    }
-
-    .section-head h2{
-        font-size:31px;
-    }
-
-    .research-grid,
-    .skills-grid,
-    .cert-grid,
-    .maps-grid,
-    .project-grid,
-    .future-grid,
-    .blog-grid,
-    .reference-grid,
-    .stats{
-        grid-template-columns:1fr;
-    }
-
-    .about-info{
-        grid-template-columns:1fr;
-    }
-
-    .profile-card{
-        width:300px;
-    }
-
-    .profile-card img{
-        height:370px;
+        font-size:48px;
     }
 }
-
 </style>
 </head>
 
 <body>
 
-<!-- ================= NAVIGATION ================= -->
+<!-- NAVIGATION -->
+<header>
+<div class="container navbar">
 
-<nav>
-<div class="nav-container">
+<a href="#home" class="logo">
+Saba <span>Nazir Ahmad</span>
+</a>
 
-<a href="#home" class="logo">Saba <span>Nazir</span></a>
-
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
 
 <ul class="nav-links" id="navLinks">
 <li><a href="#home">Home</a></li>
@@ -888,330 +840,77 @@ footer{
 <li><a href="#education">Education</a></li>
 <li><a href="#experience">Experience</a></li>
 <li><a href="#publications">Publications</a></li>
+<li><a href="#blog">Blog</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#maps">Maps</a></li>
 <li><a href="#skills">Skills</a></li>
-<li><a href="#future">Future Research</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul>
 
 </div>
-</nav>
+</header>
 
 
-<!-- ================= HERO ================= -->
-
+<!-- HERO -->
 <section class="hero" id="home">
+<div class="container">
 
-<div class="container hero-grid">
+<div class="hero-grid">
 
 <div>
 
-<span class="badge">Researcher • Geospatial Scientist • Environmental Analyst</span>
+<div class="hero-badge">
+🛰️ Researcher • Geospatial Scientist • Environmental Analyst
+</div>
 
-<h1>Saba <span>Nazir Ahmad</span></h1>
+<h1>
+Saba <span class="gradient-text">Nazir Ahmad</span>
+</h1>
 
-<h2>GIS, Remote Sensing & Earth Observation Researcher</h2>
+<h2>
+GIS, Remote Sensing & Earth Observation Researcher
+</h2>
 
 <p>
 MPhil Geography researcher working at the intersection of Physical Geography,
-Earth Observation, climate hazards, cryosphere dynamics, environmental
-modelling and geospatial science.
+Earth Observation, climate hazards, cryosphere dynamics, environmental modelling,
+disaster risk reduction and geospatial science.
 </p>
 
 <div class="hero-tags">
 <span class="tag">Climate Hazards</span>
 <span class="tag">Cryosphere & GLOFs</span>
 <span class="tag">GIS & Remote Sensing</span>
+<span class="tag">Earth Observation</span>
 <span class="tag">GeoAI</span>
 <span class="tag">Disaster Risk Reduction</span>
 <span class="tag">Environmental Modelling</span>
 </div>
 
-<div class="buttons">
-
-<a class="btn btn-primary" href="#research">
-Explore My Research
-</a>
-
-<a class="btn btn-outline" href="#publications">
-View Publications
-</a>
-
-<a class="btn btn-outline"
-href="https://www.linkedin.com/in/saba-nazirahmad-711b8a387/"
-target="_blank">
-LinkedIn
-</a>
-
-<a class="btn btn-outline" href="#contact">
-Contact Me
-</a>
-
+<div class="hero-buttons">
+<a href="#research" class="btn btn-primary">🔬 Explore My Research</a>
+<a href="#publications" class="btn btn-secondary">📚 Publications</a>
+<a href="https://www.linkedin.com/in/saba-nazirahmad-711b8a387/" target="_blank" class="btn btn-secondary">in LinkedIn</a>
+<a href="#contact" class="btn btn-secondary">✉ Contact Me</a>
 </div>
 
 </div>
 
-
-<!-- PROFILE PHOTO -->
-
-<div class="profile-area">
+<div class="profile-wrap">
 
 <div class="profile-card">
 
-<img src="profile.jpg"
-alt="Saba Nazir Ahmad - GIS Remote Sensing Researcher"
-onerror="this.src='https://via.placeholder.com/700x850?text=Saba+Nazir+Ahmad';">
+<!-- PROFILE PHOTO -->
+<img src="profile-photo.jpg"
+alt="Saba Nazir Ahmad - GIS Remote Sensing Researcher">
+
+</div>
 
 <div class="profile-caption">
-
-<h3>Saba Nazir Ahmad</h3>
-
-<p>GIS • Remote Sensing • Earth Observation</p>
-
+📍 Lahore, Pakistan<br>
+GIS • Remote Sensing • Climate Research
 </div>
 
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= ABOUT ================= -->
-
-<section id="about">
-
-<div class="container">
-
-<div class="section-head">
-
-<span class="section-label">Research Profile</span>
-
-<h2>About Me</h2>
-
-<p>
-Research-driven geospatial scientist focused on understanding environmental
-and climate-related challenges through Earth Observation.
-</p>
-
-</div>
-
-
-<div class="about-grid">
-
-<div class="card">
-
-<h3>Building Geospatial Solutions for Environmental Challenges</h3>
-
-<p>
-I am a Geography researcher specializing in Geographic Information Systems,
-Remote Sensing, Earth Observation and environmental spatial modelling.
-</p>
-
-<br>
-
-<p>
-My research focuses on climate-induced hazards, cryosphere dynamics,
-Glacial Lake Outburst Floods (GLOFs), disaster risk reduction,
-climate adaptation and environmental change.
-</p>
-
-<br>
-
-<p>
-My MPhil research investigates GLOF susceptibility and community adaptation
-in Nagar Valley, Gilgit-Baltistan, using multi-source satellite and
-geospatial datasets.
-</p>
-
-<br>
-
-<h3>Research Vision</h3>
-
-<p>
-To integrate Earth Observation, GIS, spatial modelling and Explainable GeoAI
-to better understand environmental hazards and support climate resilience,
-disaster risk reduction and sustainable environmental management.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>Research Profile</h3>
-
-<div class="about-info">
-
-<div class="info-box">
-<strong>Current Degree</strong>
-MPhil Geography
-</div>
-
-<div class="info-box">
-<strong>CGPA</strong>
-3.74 / 4.00
-</div>
-
-<div class="info-box">
-<strong>Research Domain</strong>
-Physical Geography & Earth Sciences
-</div>
-
-<div class="info-box">
-<strong>Core Focus</strong>
-Climate Hazards & Cryosphere
-</div>
-
-<div class="info-box">
-<strong>Location</strong>
-Lahore, Pakistan
-</div>
-
-<div class="info-box">
-<strong>Research Interest</strong>
-GIS, EO & GeoAI
-</div>
-
-</div>
-
-<br>
-
-<div class="buttons">
-
-<a class="btn btn-primary"
-href="https://github.com/Saba-Nazir612"
-target="_blank">
-GitHub
-</a>
-
-<a class="btn btn-outline"
-href="https://www.linkedin.com/in/saba-nazirahmad-711b8a387/"
-target="_blank">
-LinkedIn
-</a>
-
-<a class="btn btn-outline"
-href="mailto:nazirsabanazirsaba@gmail.com">
-Email
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= RESEARCH ================= -->
-
-<section id="research">
-
-<div class="container">
-
-<div class="section-head">
-
-<span class="section-label">Research Focus</span>
-
-<h2>Research & Scientific Interests</h2>
-
-<p>
-My work combines geospatial technologies, Earth observation,
-environmental modelling and climate science.
-</p>
-
-</div>
-
-
-<div class="featured">
-
-<h3>Confronting Glacial Hazards: GLOF Susceptibility & Community Adaptation</h3>
-
-<p>
-<strong>Nagar Valley, Gilgit-Baltistan, Pakistan</strong>
-</p>
-
-<br>
-
-<p>
-This research assesses Glacial Lake Outburst Flood susceptibility and
-community adaptation using GIS, Remote Sensing and multi-source
-environmental datasets.
-</p>
-
-<div class="featured-tags">
-<span class="small-tag">Sentinel-2</span>
-<span class="small-tag">Landsat</span>
-<span class="small-tag">SRTM DEM</span>
-<span class="small-tag">CHIRPS</span>
-<span class="small-tag">Spatial Modelling</span>
-<span class="small-tag">Multi-Criteria Analysis</span>
-</div>
-
-</div>
-
-
-<div class="research-grid" style="margin-top:30px;">
-
-<div class="research-card">
-<div class="icon">🏔️</div>
-<h3>Cryosphere & Mountain Hazards</h3>
-<p>
-Glacier-fed environments, GLOFs, mountain hazards and climate-induced
-cryospheric change.
-</p>
-</div>
-
-<div class="research-card">
-<div class="icon">🌡️</div>
-<h3>Climate & Environmental Change</h3>
-<p>
-Climate variability, extreme events, environmental vulnerability and
-climate adaptation.
-</p>
-</div>
-
-<div class="research-card">
-<div class="icon">🛰️</div>
-<h3>Earth Observation</h3>
-<p>
-Multi-source satellite data integration for environmental monitoring
-and spatial assessment.
-</p>
-</div>
-
-<div class="research-card">
-<div class="icon">⚠️</div>
-<h3>Disaster Risk Reduction</h3>
-<p>
-Hazard susceptibility, vulnerability assessment, community resilience
-and climate adaptation.
-</p>
-</div>
-
-<div class="research-card">
-<div class="icon">🌍</div>
-<h3>Environmental Modelling</h3>
-<p>
-LULC, climate datasets, spatial modelling and environmental
-susceptibility assessment.
-</p>
-</div>
-
-<div class="research-card">
-<div class="icon">🤖</div>
-<h3>GeoAI & Spatial Data Science</h3>
-<p>
-Python, R, machine learning concepts, Google Earth Engine and
-data-driven environmental modelling.
-</p>
 </div>
 
 </div>
@@ -1242,35 +941,207 @@ data-driven environmental modelling.
 </div>
 
 </div>
-
 </section>
 
 
-<!-- ================= EDUCATION ================= -->
-
-<section id="education">
-
+<!-- ABOUT -->
+<section id="about">
 <div class="container">
 
-<div class="section-head">
+<div class="about-grid">
+
+<div class="about-photo">
+<img src="profile-photo.jpg" alt="Saba Nazir Ahmad">
+</div>
+
+<div>
+
+<span class="section-label">Research Profile</span>
+
+<h2 class="section-title">About Me</h2>
+
+<p class="section-intro">
+Research-driven geospatial scientist focused on understanding environmental
+and climate-related challenges through Earth Observation, GIS and spatial modelling.
+</p>
+
+<p>
+I am a Geography researcher specializing in Geographic Information Systems,
+Remote Sensing, Earth Observation and environmental spatial modelling.
+</p>
+
+<br>
+
+<p>
+My research focuses on climate-induced hazards, cryosphere dynamics,
+Glacial Lake Outburst Floods (GLOFs), disaster risk reduction,
+climate adaptation and environmental change.
+</p>
+
+<br>
+
+<p>
+My MPhil research investigates GLOF susceptibility and community adaptation
+in Nagar Valley, Gilgit-Baltistan, using multi-source satellite and
+geospatial datasets.
+</p>
+
+<div class="info-list">
+
+<div class="info">
+<b>Current Degree</b>
+<span>MPhil Geography</span>
+</div>
+
+<div class="info">
+<b>CGPA</b>
+<span>3.74 / 4.00</span>
+</div>
+
+<div class="info">
+<b>Research Domain</b>
+<span>Physical Geography & Earth Sciences</span>
+</div>
+
+<div class="info">
+<b>Core Focus</b>
+<span>Climate Hazards & Cryosphere</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- RESEARCH -->
+<section id="research" style="background:#fff;">
+<div class="container">
+
+<span class="section-label">What I Work On</span>
+
+<h2 class="section-title">Research & Scientific Interests</h2>
+
+<p class="section-intro">
+My work combines geospatial technologies, Earth observation,
+environmental modelling and climate science.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<div class="card-icon">🏔️</div>
+<h3>Cryosphere & Mountain Hazards</h3>
+<p>
+Glacier-fed environments, GLOFs, mountain hazards and climate-induced
+cryospheric change.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🌡️</div>
+<h3>Climate & Environmental Change</h3>
+<p>
+Climate variability, extreme events, environmental vulnerability
+and climate adaptation.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🛰️</div>
+<h3>Earth Observation</h3>
+<p>
+Multi-source satellite data integration for environmental monitoring
+and spatial assessment.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">⚠️</div>
+<h3>Disaster Risk Reduction</h3>
+<p>
+Hazard susceptibility, vulnerability assessment, community resilience
+and climate adaptation.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🌍</div>
+<h3>Environmental Modelling</h3>
+<p>
+Climate datasets, LULC, environmental change, spatial modelling
+and susceptibility assessment.
+</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🤖</div>
+<h3>GeoAI & Spatial Data Science</h3>
+<p>
+Python, R, machine learning concepts, Google Earth Engine
+and data-driven environmental modelling.
+</p>
+</div>
+
+</div>
+
+<br><br>
+
+<div class="card">
+
+<span class="section-label">Featured MPhil Research</span>
+
+<h3 style="font-size:27px;">
+Confronting Glacial Hazards: GLOF Susceptibility & Community Adaptation
+</h3>
+
+<p>
+<strong>Nagar Valley, Gilgit-Baltistan, Pakistan</strong>
+</p>
+
+<br>
+
+<p>
+This research assesses Glacial Lake Outburst Flood susceptibility
+and community adaptation using GIS, Remote Sensing and multi-source
+environmental datasets.
+</p>
+
+<div class="project-tags">
+<span>Sentinel-2</span>
+<span>Landsat</span>
+<span>SRTM DEM</span>
+<span>CHIRPS</span>
+<span>Spatial Modelling</span>
+<span>Multi-Criteria Analysis</span>
+</div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- EDUCATION -->
+<section id="education">
+<div class="container">
 
 <span class="section-label">Academic Background</span>
 
-<h2>Education</h2>
+<h2 class="section-title">Education</h2>
 
-<p>
+<p class="section-intro">
 Academic training in Geography, Earth Sciences, GIS, Remote Sensing
 and Environmental Research.
 </p>
 
-</div>
-
-
 <div class="timeline">
 
 <div class="timeline-item">
-
-<span class="timeline-date">2024 – Present</span>
+<span class="date">2024 – Present</span>
 
 <h3>Master of Philosophy in Geography</h3>
 
@@ -1286,21 +1157,23 @@ to Glacial Lake Outburst Floods (GLOFs) in Nagar Valley, Pakistan.
 
 <p><strong>Supervisor:</strong> Prof. Sumaira Kausar</p>
 
-<ul>
-<li>Physical Geography</li>
-<li>Geomorphology</li>
-<li>GIS & Remote Sensing</li>
-<li>Earth Observation</li>
-<li>Climate Hazard Assessment</li>
-<li>Environmental Modelling</li>
-</ul>
+<br>
+
+<div class="project-tags">
+<span>Physical Geography</span>
+<span>Geomorphology</span>
+<span>GIS</span>
+<span>Remote Sensing</span>
+<span>Earth Observation</span>
+<span>Climate Hazard</span>
+<span>Environmental Modelling</span>
+</div>
 
 </div>
 
 
 <div class="timeline-item">
-
-<span class="timeline-date">2019 – 2023</span>
+<span class="date">2019 – 2023</span>
 
 <h3>Bachelor of Geography</h3>
 
@@ -1310,58 +1183,48 @@ to Glacial Lake Outburst Floods (GLOFs) in Nagar Valley, Pakistan.
 
 <p>
 <strong>Thesis:</strong>
-Trends and Pattern of Demographic Condition in Khanspur of
-Galiyat-Hazara, KPK, Pakistan.
+Trends and Pattern of Demographic Condition in Khanspur
+of Galiyat-Hazara, KPK, Pakistan.
 </p>
 
 <p><strong>Supervisor:</strong> Prof. Safdar Shirazi</p>
 
-<ul>
-<li>GIS & Spatial Analysis</li>
-<li>Remote Sensing</li>
-<li>Geomorphology & Geology</li>
-<li>Climatology</li>
-<li>Environmental Studies</li>
-<li>Disaster Risk Management</li>
-</ul>
+<br>
 
+<div class="project-tags">
+<span>GIS</span>
+<span>Spatial Analysis</span>
+<span>Remote Sensing</span>
+<span>Geomorphology</span>
+<span>Climatology</span>
+<span>Environmental Studies</span>
 </div>
 
 </div>
 
 </div>
-
+</div>
 </section>
 
 
-<!-- ================= EXPERIENCE ================= -->
-
-<section id="experience">
-
+<!-- EXPERIENCE -->
+<section id="experience" style="background:#fff;">
 <div class="container">
-
-<div class="section-head">
 
 <span class="section-label">Professional Journey</span>
 
-<h2>Experience</h2>
+<h2 class="section-title">Experience</h2>
 
-<p>
+<p class="section-intro">
 Professional experience across GIS, Earth Observation, teaching,
 climate policy and environmental research.
 </p>
 
-</div>
-
-
 <div class="timeline">
 
 <div class="timeline-item">
-
-<span class="timeline-date">Dec 2025 – Jun 2026</span>
-
+<span class="date">Dec 2025 – Jun 2026</span>
 <h3>Assistant Lecturer</h3>
-
 <h4>Superior Group of Colleges</h4>
 
 <ul>
@@ -1371,15 +1234,18 @@ climate policy and environmental research.
 <li>Supported academic assessment and scientific communication.</li>
 </ul>
 
+<div class="project-tags">
+<span>Teaching</span>
+<span>GIS</span>
+<span>Remote Sensing</span>
+<span>Environmental Science</span>
+</div>
 </div>
 
 
 <div class="timeline-item">
-
-<span class="timeline-date">Mar 2025 – Dec 2025</span>
-
+<span class="date">Mar 2025 – Dec 2025</span>
 <h3>GIS Analyst & Researcher</h3>
-
 <h4>Zameen Developments</h4>
 
 <ul>
@@ -1387,18 +1253,23 @@ climate policy and environmental research.
 <li>Performed LULC mapping, change detection and DEM-based terrain analysis.</li>
 <li>Developed hazard susceptibility models using AHP, MCDA and Kriging.</li>
 <li>Processed satellite datasets and geospatial information.</li>
-<li>Used ArcGIS Pro, QGIS, Google Earth Engine and ENVI.</li>
+<li>Used ArcGIS Pro, QGIS, GEE, ENVI and programming tools.</li>
 </ul>
 
+<div class="project-tags">
+<span>ArcGIS Pro</span>
+<span>QGIS</span>
+<span>GEE</span>
+<span>AHP</span>
+<span>MCDA</span>
+<span>Kriging</span>
+</div>
 </div>
 
 
 <div class="timeline-item">
-
-<span class="timeline-date">Jun 2025 – Nov 2025</span>
-
+<span class="date">Jun 2025 – Nov 2025</span>
 <h3>Research Intern</h3>
-
 <h4>Chief Minister's Climate Leadership</h4>
 
 <ul>
@@ -1408,116 +1279,146 @@ climate policy and environmental research.
 <li>Participated in stakeholder engagement and technical capacity building.</li>
 </ul>
 
+<div class="project-tags">
+<span>Climate Policy</span>
+<span>DRR</span>
+<span>Climate Resilience</span>
+<span>Governance</span>
+</div>
 </div>
 
 
 <div class="timeline-item">
-
-<span class="timeline-date">Jul 2024 – Sep 2025</span>
-
+<span class="date">Jul 2024 – Sep 2025</span>
 <h3>Geographic Information Systems Analyst</h3>
-
 <h4>Sheher Saaz</h4>
 
 <ul>
 <li>Supported urban and spatial planning projects through GIS analysis.</li>
 <li>Prepared thematic maps and processed satellite datasets.</li>
-<li>Contributed to land-use assessment and site analysis.</li>
-<li>Applied GIS and Remote Sensing to spatial planning.</li>
+<li>Contributed to land-use assessment, site analysis and planning support.</li>
+<li>Applied GIS and Remote Sensing to transform spatial data into insights.</li>
 </ul>
 
+<div class="project-tags">
+<span>GIS</span>
+<span>Urban Planning</span>
+<span>Mapping</span>
+<span>Remote Sensing</span>
+</div>
 </div>
 
 
 <div class="timeline-item">
-
-<span class="timeline-date">Jan 2024 – Dec 2024</span>
-
+<span class="date">Jan 2024 – Dec 2024</span>
 <h3>Geographic Information Systems Analyst</h3>
-
 <h4>The Urban Unit</h4>
 
 <ul>
 <li>Performed GIS, Remote Sensing and spatial analysis for urban planning.</li>
 <li>Developed LULC maps and change-detection workflows.</li>
-<li>Conducted DEM-based terrain analysis.</li>
+<li>Conducted DEM-based terrain analysis and environmental assessment.</li>
 <li>Supported disaster risk management through geospatial analysis.</li>
 </ul>
 
+<div class="project-tags">
+<span>GIS</span>
+<span>LULC</span>
+<span>DEM</span>
+<span>Disaster Risk</span>
+</div>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
-<!-- ================= PUBLICATIONS ================= -->
-
+<!-- PUBLICATIONS -->
 <section id="publications">
-
 <div class="container">
-
-<div class="section-head">
 
 <span class="section-label">Scientific Output</span>
 
-<h2>Publications</h2>
+<h2 class="section-title">Publications</h2>
 
-<p>
+<p class="section-intro">
 Selected research contributions in Earth Observation,
 environmental change and climate-related geospatial analysis.
 </p>
 
-</div>
 
+<div class="pub-card">
 
-<div class="publication">
+<img class="pub-image"
+src="https://saba-nazir612.github.io/Spatial-temporal%20change%20of%20LULC.jpg"
+alt="Land use land cover research">
 
-<span class="pub-year">2026 · Published</span>
+<div>
+
+<span class="status">Published · 2026</span>
 
 <h3>
 Spatiotemporal Analysis of Land Use & Land Surface Temperature Dynamics
-and Their Potential Impacts on Agriculture of Hafizabad District,
-Pakistan, Using Multispectral Satellite Imagery
+and Their Potential Impacts on Agriculture of Hafizabad District, Pakistan,
+Using Multispectral Satellite Imagery
 </h3>
 
 <p><em>International Journal of Social Sciences Bulletin</em></p>
+
+<br>
 
 <p>
 <strong>Authors:</strong> Saba Nazir, Sumaira Kausar, Faiza Sarwar
 </p>
 
-<a class="pub-link"
+<br>
+
+<a class="btn btn-primary"
 href="https://doi.org/10.5281/zenodo.21336894"
 target="_blank">
 View DOI →
 </a>
 
 </div>
+</div>
 
 
-<div class="publication">
+<div class="pub-card">
 
-<span class="pub-year">2026 · Under Review</span>
+<img class="pub-image"
+src="https://saba-nazir612.github.io/NDVI%20Classification%20Map%20of%20Gujranwala.png"
+alt="Gujranwala environmental research">
+
+<div>
+
+<span class="status">First Author · Under Review</span>
 
 <h3>
 Spatiotemporal Dynamics of Land Use, Land Surface Temperature,
-and Air Quality Under Rapid Urbanization: A Case Study of
-Gujranwala, Pakistan (2000–2024)
+and Air Quality Under Rapid Urbanization: A Case Study of Gujranwala,
+Pakistan (2000–2024)
 </h3>
 
 <p><em>Dialogue Social Science Review</em></p>
 
+<br>
+
 <p><strong>Authors:</strong> Nazir, S. & Kausar, S.</p>
 
 </div>
+</div>
 
 
-<div class="publication">
+<div class="pub-card">
 
-<span class="pub-year">2026 · Submitted</span>
+<img class="pub-image"
+src="https://saba-nazir612.github.io/Flood%20Risk%20Zonation%20Map.jpg"
+alt="GLOF research">
+
+<div>
+
+<span class="status">Submitted for Peer Review · 2026</span>
 
 <h3>
 Confronting Glacial Hazards: Disaster Impact and Community Adaptation
@@ -1526,643 +1427,538 @@ to Glacial Lake Outburst Floods (GLOFs) in Nagar Valley, Pakistan
 
 <p><em>MPhil Research</em></p>
 
+<br>
+
 <p>
-Research applying GIS, Remote Sensing, DEM analysis, climate datasets
-and multi-criteria spatial modelling to assess GLOF susceptibility
-and community adaptation.
+Research applying GIS, Remote Sensing, DEM analysis,
+climate datasets and multi-criteria spatial modelling to assess
+GLOF susceptibility and community adaptation.
 </p>
 
 </div>
-
 </div>
 
+</div>
 </section>
 
 
-<!-- ================= CONFERENCES ================= -->
-
-<section>
-
+<!-- BLOG -->
+<section id="blog" style="background:#fff;">
 <div class="container">
-
-<div class="section-head">
 
 <span class="section-label">Scientific Communication</span>
 
-<h2>Conferences & Presentations</h2>
+<h2 class="section-title">Research Insights & Articles</h2>
 
-</div>
+<p class="section-intro">
+A space for research insights, geospatial tutorials, environmental
+observations and scientific communication.
+</p>
 
+<div class="grid">
 
-<div class="project-grid">
+<div class="card blog-card">
 
-<div class="project">
+<img src="https://saba-nazir612.github.io/Flood%20Risk%20Zonation%20Map.jpg"
+alt="GLOF hazard research">
 
-<div class="project-icon">🌐</div>
+<div class="blog-content">
 
-<h3>4th International Online Conference on Materials — IOCM 2025</h3>
+<span class="blog-date">RESEARCH INSIGHT</span>
 
-<p><strong>MDPI Sciforum · November 2025</strong></p>
+<h3>
+Understanding GLOF Susceptibility in Mountain Environments
+</h3>
 
 <p>
-Presented research on Artificial Intelligence and Geospatial Simulation
-for Sustainable Materials and Environmental Applications.
+How GIS, Remote Sensing, DEMs and climate datasets can support
+assessment of glacial hazards and disaster risk reduction.
 </p>
 
 <br>
 
-<a class="pub-link"
-href="https://sciforum.net/event/IOCM2025"
-target="_blank">
-Conference →
-</a>
+<a href="#research" class="btn btn-primary">Read More →</a>
 
+</div>
 </div>
 
 
-<div class="project">
+<div class="card blog-card">
 
-<div class="project-icon">🎤</div>
+<img src="https://saba-nazir612.github.io/Spatial-temporal%20change%20of%20LULC.jpg"
+alt="LULC research">
 
-<h3>2nd International Online Conference on Functional Biomaterials — IOCFB 2026</h3>
+<div class="blog-content">
 
-<p><strong>MDPI Sciforum · July 2026 · Oral Presentation</strong></p>
+<span class="blog-date">EARTH OBSERVATION</span>
+
+<h3>
+Monitoring Land Use & Environmental Change
+</h3>
 
 <p>
-Presented “Artificial Intelligence and Geospatial Simulation for
-Sustainable Materials and Environmental Applications.”
+Using multi-temporal satellite imagery to understand land-use,
+vegetation and environmental transformation.
 </p>
 
 <br>
 
-<a class="pub-link"
-href="https://sciforum.net/event/IOCFB2026"
-target="_blank">
-Conference →
-</a>
+<a href="#maps" class="btn btn-primary">Explore Maps →</a>
 
+</div>
+</div>
+
+
+<div class="card blog-card">
+
+<img src="https://saba-nazir612.github.io/Rainfall%20analysis.png"
+alt="Rainfall analysis">
+
+<div class="blog-content">
+
+<span class="blog-date">CLIMATE SCIENCE</span>
+
+<h3>
+Climate Data for Environmental Hazard Assessment
+</h3>
+
+<p>
+Exploring rainfall and climate datasets for environmental modelling,
+hazard assessment and climate adaptation.
+</p>
+
+<br>
+
+<a href="#future" class="btn btn-primary">Research Direction →</a>
+
+</div>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
-<!-- ================= PROJECTS ================= -->
-
+<!-- PROJECTS -->
 <section id="projects">
-
 <div class="container">
-
-<div class="section-head">
 
 <span class="section-label">Featured Work</span>
 
-<h2>Research Projects</h2>
+<h2 class="section-title">Research Projects</h2>
 
-<p>
+<p class="section-intro">
 Selected research and applied geospatial projects.
 </p>
 
-</div>
+<div class="grid">
 
+<div class="card project">
 
-<div class="project-grid">
+<img class="project-image"
+src="https://saba-nazir612.github.io/Flood%20Risk%20Zonation%20Map.jpg"
+alt="GLOF Susceptibility">
 
-<div class="project">
-<div class="project-icon">🏔️</div>
-<h3>GLOF Susceptibility & Community Adaptation</h3>
+<div class="project-content">
+
+<h3>🏔️ GLOF Susceptibility & Community Adaptation</h3>
+
 <p>
 GIS and Remote Sensing-based assessment of climate-induced
 Glacial Lake Outburst Flood susceptibility in Nagar Valley,
 Gilgit-Baltistan.
 </p>
-<div class="skill-links">
-<span class="small-tag">GLOF</span>
-<span class="small-tag">GIS</span>
-<span class="small-tag">Remote Sensing</span>
-<span class="small-tag">Climate</span>
+
+<div class="project-tags">
+<span>GLOF</span>
+<span>GIS</span>
+<span>Remote Sensing</span>
+<span>Climate</span>
+</div>
+
 </div>
 </div>
 
 
-<div class="project">
-<div class="project-icon">🌡️</div>
-<h3>Land Surface Temperature & Agricultural Change</h3>
+<div class="card project">
+
+<img class="project-image"
+src="https://saba-nazir612.github.io/Spatial-temporal%20change%20of%20LULC.jpg"
+alt="LULC Change">
+
+<div class="project-content">
+
+<h3>🌡️ Land Surface Temperature & Agricultural Change</h3>
+
 <p>
 Spatiotemporal analysis of land use and land surface temperature
 and their potential impacts on agriculture in Hafizabad.
 </p>
-<div class="skill-links">
-<span class="small-tag">LULC</span>
-<span class="small-tag">LST</span>
-<span class="small-tag">Sentinel</span>
-<span class="small-tag">Landsat</span>
+
+<div class="project-tags">
+<span>LULC</span>
+<span>LST</span>
+<span>Sentinel</span>
+<span>Landsat</span>
+</div>
+
 </div>
 </div>
 
 
-<div class="project">
-<div class="project-icon">🏙️</div>
-<h3>Urbanization & Environmental Change</h3>
+<div class="card project">
+
+<img class="project-image"
+src="https://saba-nazir612.github.io/NDVI%20Classification%20Map%20of%20Gujranwala.png"
+alt="Urban Environmental Change">
+
+<div class="project-content">
+
+<h3>🏙️ Urbanization & Environmental Change</h3>
+
 <p>
 Analysis of urban expansion, land use, land surface temperature
 and air quality dynamics in Gujranwala.
 </p>
-<div class="skill-links">
-<span class="small-tag">Urbanization</span>
-<span class="small-tag">LST</span>
-<span class="small-tag">Air Quality</span>
+
+<div class="project-tags">
+<span>Urbanization</span>
+<span>LST</span>
+<span>Air Quality</span>
+</div>
+
 </div>
 </div>
 
 
-<div class="project">
-<div class="project-icon">🤖</div>
+<div class="card project">
+
+<div style="
+height:210px;
+display:grid;
+place-items:center;
+font-size:70px;
+background:linear-gradient(135deg,#ede9fe,#cffafe,#fce7f3);
+">
+🤖
+</div>
+
+<div class="project-content">
+
 <h3>Explainable GeoAI for Disaster Risk Reduction</h3>
+
 <p>
 Future research direction integrating machine learning,
 multi-source Earth Observation and explainable AI for
 environmental hazard susceptibility assessment.
 </p>
-<div class="skill-links">
-<span class="small-tag">Random Forest</span>
-<span class="small-tag">XGBoost</span>
-<span class="small-tag">LightGBM</span>
-<span class="small-tag">SHAP</span>
+
+<div class="project-tags">
+<span>Random Forest</span>
+<span>XGBoost</span>
+<span>LightGBM</span>
+<span>SHAP</span>
+</div>
+
 </div>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
-<!-- ================= MAPS ================= -->
-
-<section id="maps">
-
+<!-- MAPS -->
+<section id="maps" style="background:#fff;">
 <div class="container">
-
-<div class="section-head">
 
 <span class="section-label">Geospatial Portfolio</span>
 
-<h2>Selected Research Maps</h2>
+<h2 class="section-title">Selected Research Maps</h2>
 
-<p>
+<p class="section-intro">
 Selected GIS, Remote Sensing and Earth Observation outputs from
 environmental and climate-related research.
 </p>
 
-</div>
-
-
-<div class="maps-grid">
+<div class="grid">
 
 
 <div class="map-card">
-
-<img src="Flood Risk Zonation Map.jpg"
+<img src="https://saba-nazir612.github.io/Flood%20Risk%20Zonation%20Map.jpg"
 alt="Flood Risk Zonation Map">
 
-<div class="map-content">
-
+<div class="map-body">
 <h3>Flood Risk Zonation Map</h3>
-
 <p>
 Spatial assessment of flood and climate-related hazard risk
 for environmental disaster risk reduction.
 </p>
-
-<br>
-
-<a href="Flood Risk Zonation Map.jpg" target="_blank">
-View Full Map →
-</a>
-
 </div>
-
 </div>
 
 
 <div class="map-card">
-
-<img src="Location Map of Hunza.jpg"
+<img src="https://saba-nazir612.github.io/Location%20Map%20of%20Hunza.jpg"
 alt="Location Map of Hunza">
 
-<div class="map-content">
-
+<div class="map-body">
 <h3>Mountain Study Area Mapping</h3>
-
 <p>
 Geospatial representation of the mountain study environment
 for cryosphere and hazard research.
 </p>
-
-<br>
-
-<a href="Location Map of Hunza.jpg" target="_blank">
-View Full Map →
-</a>
-
 </div>
-
 </div>
 
 
 <div class="map-card">
-
-<img src="Elevation Map of Hunza.jpg"
+<img src="https://saba-nazir612.github.io/Elevation%20Map%20of%20Hunza.jpg"
 alt="Elevation Map of Hunza">
 
-<div class="map-content">
-
+<div class="map-body">
 <h3>Elevation Analysis</h3>
-
 <p>
 Digital elevation analysis supporting terrain-based environmental
 and hazard modelling.
 </p>
-
-<br>
-
-<a href="Elevation Map of Hunza.jpg" target="_blank">
-View Full Map →
-</a>
-
 </div>
-
 </div>
 
 
 <div class="map-card">
+<img src="https://saba-nazir612.github.io/Spatial-temporal%20change%20of%20LULC.jpg"
+alt="Spatial Temporal LULC">
 
-<img src="Spatial-temporal change of LULC.jpg"
-alt="Spatial Temporal LULC Change">
-
-<div class="map-content">
-
+<div class="map-body">
 <h3>Spatial-Temporal LULC Change</h3>
-
 <p>
 Land-use and land-cover change assessment using multi-temporal
 Earth Observation data.
 </p>
-
-<br>
-
-<a href="Spatial-temporal change of LULC.jpg" target="_blank">
-View Full Map →
-</a>
-
 </div>
-
 </div>
 
 
 <div class="map-card">
-
-<img src="Normalized Difference Vegetation Index.jpg"
+<img src="https://saba-nazir612.github.io/Normalized%20Difference%20Vegetation%20Index.jpg"
 alt="NDVI Map">
 
-<div class="map-content">
-
+<div class="map-body">
 <h3>Normalized Difference Vegetation Index</h3>
-
 <p>
 Vegetation condition and environmental monitoring using
 satellite-derived spectral indices.
 </p>
-
-<br>
-
-<a href="Normalized Difference Vegetation Index.jpg" target="_blank">
-View Full Map →
-</a>
-
 </div>
-
 </div>
 
 
 <div class="map-card">
+<img src="https://saba-nazir612.github.io/Normalized%20Difference%20Built-up%20area%20Index.jpg"
+alt="NDBI Map">
 
-<img src="Normalized Difference Built-up area Index.jpg"
-alt="Built-up Area Map">
-
-<div class="map-content">
-
+<div class="map-body">
 <h3>Built-up Area Analysis</h3>
-
 <p>
 Remote sensing-based assessment of built-up land and
 urban environmental change.
 </p>
-
-<br>
-
-<a href="Normalized Difference Built-up area Index.jpg" target="_blank">
-View Full Map →
-</a>
-
 </div>
-
 </div>
 
 
 <div class="map-card">
+<img src="https://saba-nazir612.github.io/NDVI%20Classification%20Map%20of%20Gujranwala.png"
+alt="NDVI Classification Gujranwala">
 
-<img src="NDVI Classification Map of Gujranwala.png"
-alt="NDVI Classification Map Gujranwala">
-
-<div class="map-content">
-
+<div class="map-body">
 <h3>NDVI Classification — Gujranwala</h3>
-
 <p>
 Classification of vegetation conditions for urban and
 environmental change analysis.
 </p>
-
-<br>
-
-<a href="NDVI Classification Map of Gujranwala.png" target="_blank">
-View Full Map →
-</a>
-
 </div>
-
 </div>
 
 
 <div class="map-card">
-
-<img src="Rainfall analysis.png"
+<img src="https://saba-nazir612.github.io/Rainfall%20analysis.png"
 alt="Rainfall Analysis">
 
-<div class="map-content">
-
+<div class="map-body">
 <h3>Rainfall Analysis</h3>
-
 <p>
-Climate-data analysis supporting environmental and hazard assessment.
+Climate-data analysis supporting environmental and
+hazard assessment.
 </p>
-
-<br>
-
-<a href="Rainfall analysis.png" target="_blank">
-View Full Map →
-</a>
-
+</div>
 </div>
 
 </div>
-
 </div>
-
-</div>
-
 </section>
 
 
-<!-- ================= SKILLS ================= -->
-
+<!-- SKILLS -->
 <section id="skills">
-
 <div class="container">
-
-<div class="section-head">
 
 <span class="section-label">Technical Toolkit</span>
 
-<h2>Skills & Technologies</h2>
+<h2 class="section-title">Skills & Technologies</h2>
 
-<p>
-Professional geospatial tools, software, programming languages,
-methods and research capabilities.
+<p class="section-intro">
+A detailed technical profile covering GIS, Remote Sensing,
+programming, spatial modelling, GeoAI and research methods.
 </p>
 
-</div>
-
-
-<div class="skills-grid">
-
+<div class="grid">
 
 <div class="skill-card">
-
 <h3>🗺️ GIS & Spatial Analysis</h3>
-
-<p>
-Spatial analysis, geoprocessing, cartography and spatial
-decision support.
-</p>
-
-<div class="skill-links">
-<a href="https://www.esri.com/en-us/arcgis/products/arcgis-pro/overview" target="_blank">ArcGIS Pro</a>
-<a href="https://qgis.org/" target="_blank">QGIS</a>
-<a href="https://www.esri.com/" target="_blank">Esri</a>
-<a href="https://www.qgis.org/" target="_blank">QGIS GIS</a>
+<div class="skill-list">
+<span>ArcGIS Pro</span>
+<span>QGIS</span>
+<span>Spatial Analysis</span>
+<span>Geoprocessing</span>
+<span>Cartography</span>
+<span>Geodatabases</span>
+<span>Terrain Analysis</span>
+<span>Spatial Statistics</span>
 </div>
-
 </div>
 
 
 <div class="skill-card">
-
 <h3>🛰️ Remote Sensing</h3>
-
-<p>
-Satellite image processing, multispectral analysis and
-environmental monitoring.
-</p>
-
-<div class="skill-links">
-<a href="https://www.sentinel-hub.com/" target="_blank">Sentinel-2</a>
-<a href="https://landsat.gsfc.nasa.gov/" target="_blank">Landsat</a>
-<a href="https://modis.gsfc.nasa.gov/" target="_blank">MODIS</a>
-<a href="https://www.nasa.gov/" target="_blank">NASA</a>
+<div class="skill-list">
+<span>Sentinel-2</span>
+<span>Landsat</span>
+<span>MODIS</span>
+<span>Satellite Image Processing</span>
+<span>Multispectral Analysis</span>
+<span>LULC</span>
+<span>Change Detection</span>
 </div>
-
 </div>
 
 
 <div class="skill-card">
-
-<h3>☁️ Google Earth Engine</h3>
-
-<p>
-Cloud-based satellite processing and environmental monitoring.
-</p>
-
-<div class="skill-links">
-<a href="https://earthengine.google.com/" target="_blank">Google Earth Engine</a>
-<a href="https://developers.google.com/earth-engine" target="_blank">GEE Developers</a>
+<h3>🌍 Google Earth Engine</h3>
+<div class="skill-list">
+<span>GEE</span>
+<span>JavaScript</span>
+<span>Cloud Processing</span>
+<span>Satellite Processing</span>
+<span>Time Series</span>
+<span>Environmental Monitoring</span>
 </div>
-
 </div>
 
 
 <div class="skill-card">
-
-<h3>💻 Programming</h3>
-
-<p>
-Programming and computational tools for geospatial research
-and environmental data analysis.
-</p>
-
-<div class="skill-links">
-<a href="https://www.python.org/" target="_blank">Python</a>
-<a href="https://www.r-project.org/" target="_blank">R</a>
-<a href="https://www.w3schools.com/sql/" target="_blank">SQL</a>
-<a href="https://jupyter.org/" target="_blank">Jupyter</a>
+<h3>💻 Programming & Data Science</h3>
+<div class="skill-list">
+<span>Python</span>
+<span>R</span>
+<span>SQL</span>
+<span>Data Analysis</span>
+<span>Automation</span>
+<span>Visualization</span>
 </div>
-
 </div>
 
 
 <div class="skill-card">
+<h3>📊 Spatial Modelling</h3>
+<div class="skill-list">
+<span>AHP</span>
+<span>MCDA</span>
+<span>Kriging</span>
+<span>DEM Analysis</span>
+<span>Susceptibility Modelling</span>
+<span>Risk Assessment</span>
+</div>
+</div>
 
+
+<div class="skill-card">
 <h3>🤖 GeoAI & Machine Learning</h3>
-
-<p>
-Data-driven environmental modelling and explainable spatial AI.
-</p>
-
-<div class="skill-links">
-<a href="https://scikit-learn.org/" target="_blank">Scikit-learn</a>
-<a href="https://xgboost.readthedocs.io/" target="_blank">XGBoost</a>
-<a href="https://lightgbm.readthedocs.io/" target="_blank">LightGBM</a>
-<a href="https://shap.readthedocs.io/" target="_blank">SHAP</a>
+<div class="skill-list">
+<span>Random Forest</span>
+<span>XGBoost</span>
+<span>LightGBM</span>
+<span>Machine Learning</span>
+<span>Explainable AI</span>
+<span>SHAP</span>
+<span>GeoAI</span>
 </div>
-
 </div>
 
 
 <div class="skill-card">
-
-<h3>📐 Spatial Modelling</h3>
-
-<p>
-Spatial susceptibility modelling and terrain-based environmental
-assessment.
-</p>
-
-<div class="skill-links">
-<a href="#">AHP</a>
-<a href="#">MCDA</a>
-<a href="#">Kriging</a>
-<a href="#">DEM Analysis</a>
+<h3>🌡️ Environmental Analysis</h3>
+<div class="skill-list">
+<span>Climate Analysis</span>
+<span>Cryosphere</span>
+<span>GLOF</span>
+<span>Disaster Risk</span>
+<span>Environmental Change</span>
+<span>Climate Adaptation</span>
 </div>
-
 </div>
 
 
 <div class="skill-card">
-
-<h3>🌍 Environmental Analysis</h3>
-
-<p>
-Land use, climate, cryosphere and disaster-risk analysis.
-</p>
-
-<div class="skill-links">
-<a href="#">LULC</a>
-<a href="#">Climate Analysis</a>
-<a href="#">Cryosphere</a>
-<a href="#">GLOF</a>
+<h3>📈 Data & Research</h3>
+<div class="skill-list">
+<span>SPSS</span>
+<span>Microsoft Excel</span>
+<span>Statistical Analysis</span>
+<span>Academic Writing</span>
+<span>Technical Reporting</span>
+<span>Literature Review</span>
+<span>Presentation</span>
 </div>
-
 </div>
 
 
 <div class="skill-card">
-
-<h3>📊 Data Analysis</h3>
-
-<p>
-Statistical analysis, visualization and research data management.
-</p>
-
-<div class="skill-links">
-<a href="https://www.ibm.com/spss" target="_blank">SPSS</a>
-<a href="https://www.microsoft.com/microsoft-365/excel" target="_blank">Excel</a>
-<a href="#">Statistics</a>
-<a href="#">Visualization</a>
+<h3>🧠 Professional Skills</h3>
+<div class="skill-list">
+<span>Critical Thinking</span>
+<span>Problem Solving</span>
+<span>Scientific Communication</span>
+<span>Teamwork</span>
+<span>Research Management</span>
+<span>Technical Communication</span>
+</div>
 </div>
 
 </div>
-
-
-<div class="skill-card">
-
-<h3>🔬 Research & Scientific Writing</h3>
-
-<p>
-Academic writing, technical reporting, literature review and
-scientific presentation.
-</p>
-
-<div class="skill-links">
-<a href="#">Academic Writing</a>
-<a href="#">Technical Reporting</a>
-<a href="#">Literature Review</a>
-<a href="#">Presentation</a>
 </div>
-
-</div>
-
-
-<div class="skill-card">
-
-<h3>🎯 Professional Skills</h3>
-
-<p>
-Critical thinking, problem solving, teamwork and scientific
-communication.
-</p>
-
-<div class="skill-links">
-<a href="#">Critical Thinking</a>
-<a href="#">Problem Solving</a>
-<a href="#">Teamwork</a>
-<a href="#">Communication</a>
-</div>
-
-</div>
-
-
-</div>
-
-</div>
-
 </section>
 
 
-<!-- ================= AWARDS ================= -->
-
-<section>
-
+<!-- AWARDS -->
+<section id="awards" style="background:#fff;">
 <div class="container">
-
-<div class="section-head">
 
 <span class="section-label">Recognition</span>
 
-<h2>Awards & Honors</h2>
+<h2 class="section-title">Awards & Honors</h2>
 
-</div>
+<p class="section-intro">
+Academic achievements and recognition throughout my educational
+and research journey.
+</p>
 
+<div class="grid">
 
-<div class="project-grid">
-
-<div class="project">
-<div class="project-icon">🏆</div>
+<div class="award">
+<div class="award-icon">🏆</div>
+<span class="date">2024</span>
 <h3>PEEF Scholar</h3>
 <p>
 Punjab Educational Endowment Fund Scholarship awarded by the
@@ -2171,8 +1967,8 @@ Government of Punjab on academic merit for postgraduate studies.
 </div>
 
 
-<div class="project">
-<div class="project-icon">🎓</div>
+<div class="award">
+<div class="award-icon">🎓</div>
 <h3>Academic Merit</h3>
 <p>
 Recognized for strong academic performance throughout higher
@@ -2181,8 +1977,8 @@ education and postgraduate research.
 </div>
 
 
-<div class="project">
-<div class="project-icon">🌐</div>
+<div class="award">
+<div class="award-icon">🌍</div>
 <h3>International Research Presentation</h3>
 <p>
 International scientific presentations through MDPI Sciforum conferences.
@@ -2190,76 +1986,141 @@ International scientific presentations through MDPI Sciforum conferences.
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
-<!-- ================= FUTURE RESEARCH ================= -->
-
-<section id="future">
-
+<!-- CONFERENCES -->
+<section>
 <div class="container">
 
-<div class="section-head">
+<span class="section-label">Scientific Communication</span>
+
+<h2 class="section-title">Conferences & Presentations</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="card-icon">🌐</div>
+
+<h3>4th International Online Conference on Materials — IOCM 2025</h3>
+
+<p>
+<strong>MDPI Sciforum · November 2025</strong>
+</p>
+
+<br>
+
+<p>
+Presented research on Artificial Intelligence and Geospatial Simulation
+for Sustainable Materials and Environmental Applications.
+</p>
+
+<br>
+
+<a href="https://sciforum.net/event/IOCM2025"
+target="_blank"
+class="btn btn-primary">
+Conference →
+</a>
+
+</div>
+
+
+<div class="card">
+<div class="card-icon">🎤</div>
+
+<h3>2nd International Online Conference on Functional Biomaterials — IOCFB 2026</h3>
+
+<p>
+<strong>MDPI Sciforum · July 2026 · Oral Presentation</strong>
+</p>
+
+<br>
+
+<p>
+Presented “Artificial Intelligence and Geospatial Simulation
+for Sustainable Materials and Environmental Applications.”
+</p>
+
+<br>
+
+<a href="https://sciforum.net/event/IOCFB2026"
+target="_blank"
+class="btn btn-primary">
+Conference →
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- FUTURE RESEARCH -->
+<section id="future">
+<div class="container">
 
 <span class="section-label">Research Direction</span>
 
-<h2>Future Research</h2>
+<h2 class="section-title">Future Research</h2>
 
-<p>
+<p class="section-intro">
 Research directions I aim to develop through doctoral studies
 and international collaborations.
 </p>
 
-</div>
+<div class="grid">
 
-
-<div class="future-grid">
-
-<div class="future">
-<h3>🏔️ Mountain & Cryosphere Systems</h3>
+<div class="card">
+<div class="card-icon">🏔️</div>
+<h3>Mountain & Cryosphere Systems</h3>
 <p>
 Glacier dynamics, GLOFs, mountain hazards and climate-induced
 cryospheric change.
 </p>
 </div>
 
-<div class="future">
-<h3>🌡️ Climate Change</h3>
+<div class="card">
+<div class="card-icon">🌡️</div>
+<h3>Climate Change</h3>
 <p>
 Climate variability, extreme events, environmental vulnerability
 and adaptation.
 </p>
 </div>
 
-<div class="future">
-<h3>🤖 Explainable GeoAI</h3>
+<div class="card">
+<div class="card-icon">🤖</div>
+<h3>Explainable GeoAI</h3>
 <p>
 Machine learning and explainable spatial modelling for
 environmental risk assessment.
 </p>
 </div>
 
-<div class="future">
-<h3>🌍 Critical Zone Research</h3>
+<div class="card">
+<div class="card-icon">🌍</div>
+<h3>Critical Zone Research</h3>
 <p>
 Interactions between climate, geomorphology, ecosystems
 and human activity.
 </p>
 </div>
 
-<div class="future">
-<h3>⚠️ Disaster Risk Reduction</h3>
+<div class="card">
+<div class="card-icon">⚠️</div>
+<h3>Disaster Risk Reduction</h3>
 <p>
-Flood and landslide susceptibility, vulnerability, community
-resilience and climate adaptation.
+Flood and landslide susceptibility, vulnerability,
+community resilience and climate adaptation.
 </p>
 </div>
 
-<div class="future">
-<h3>🛰️ Multi-Source Earth Observation</h3>
+<div class="card">
+<div class="card-icon">🛰️</div>
+<h3>Multi-Source Earth Observation</h3>
 <p>
 Integration of satellite imagery, DEMs and climate datasets
 for environmental monitoring.
@@ -2268,10 +2129,13 @@ for environmental monitoring.
 
 </div>
 
+<br><br>
 
-<div class="featured" style="margin-top:35px;">
+<div class="card">
 
-<h3>Research Vision</h3>
+<h3 style="font-size:27px;">Research Vision</h3>
+
+<br>
 
 <p>
 My future research aims to integrate GIS, multi-source Remote Sensing,
@@ -2280,395 +2144,294 @@ scientifically robust approaches for climate-induced hazard assessment,
 disaster risk reduction and sustainable environmental management.
 </p>
 
-<div class="featured-tags">
-
-<span class="small-tag">Random Forest</span>
-<span class="small-tag">XGBoost</span>
-<span class="small-tag">LightGBM</span>
-<span class="small-tag">SHAP</span>
-<span class="small-tag">GIS</span>
-<span class="small-tag">Remote Sensing</span>
-<span class="small-tag">GeoAI</span>
-
+<div class="project-tags">
+<span>Random Forest</span>
+<span>XGBoost</span>
+<span>LightGBM</span>
+<span>SHAP</span>
+<span>GIS</span>
+<span>Remote Sensing</span>
+<span>GeoAI</span>
 </div>
 
 </div>
 
 </div>
-
 </section>
 
 
-<!-- ================= CERTIFICATIONS ================= -->
-
-<section>
-
+<!-- CERTIFICATIONS -->
+<section style="background:#fff;">
 <div class="container">
-
-<div class="section-head">
 
 <span class="section-label">Professional Development</span>
 
-<h2>Certifications & Training</h2>
+<h2 class="section-title">Certifications & Training</h2>
 
-</div>
+<div class="grid">
 
-
-<div class="cert-grid">
-
-<div class="cert">
-<h3>🛰️ Advanced GIS & Remote Sensing Applications</h3>
+<div class="card">
+<div class="card-icon">🛰️</div>
+<h3>Advanced GIS & Remote Sensing Applications</h3>
 <p>
 Spatial modelling, geospatial analysis and Earth Observation
 data processing.
 </p>
 </div>
 
-<div class="cert">
-<h3>🚁 Drone-Based GIS</h3>
+<div class="card">
+<div class="card-icon">🚁</div>
+<h3>Drone-Based GIS</h3>
 <p>
 UAV and drone applications for geospatial data collection,
 mapping and geographical research.
 </p>
 </div>
 
-<div class="cert">
-<h3>🌱 Land Resource Assessment Using Remote Sensing</h3>
+<div class="card">
+<div class="card-icon">🌱</div>
+<h3>Land Resource Assessment Using Remote Sensing</h3>
 <p>
 Satellite interpretation, LULC mapping and environmental analysis.
 </p>
 </div>
 
-<div class="cert">
-<h3>🌍 Socio-Environmental Engagement</h3>
+<div class="card">
+<div class="card-icon">🌍</div>
+<h3>Socio-Environmental Engagement: A GIS Perspective</h3>
 <p>
-GIS applications for socio-environmental assessment and
-sustainable development.
+GIS applications for socio-environmental assessment
+and sustainable development.
 </p>
 </div>
 
 </div>
-
 </div>
-
 </section>
 
 
-<!-- ================= BLOG / INSIGHTS ================= -->
-
+<!-- COLLABORATION -->
 <section>
-
 <div class="container">
 
-<div class="section-head">
+<div class="card" style="
+background:linear-gradient(135deg,#ede9fe,#cffafe,#fce7f3);
+border:none;
+text-align:center;
+padding:55px 30px;
+">
 
-<span class="section-label">Research Communication</span>
+<span class="section-label">Open to Research & Collaboration</span>
 
-<h2>Insights & Research Notes</h2>
+<h2 class="section-title">
+Let's Build Geospatial Solutions Together
+</h2>
 
-<p>
-A professional space for sharing geospatial research ideas,
-methods and environmental insights.
-</p>
-
-</div>
-
-
-<div class="blog-grid">
-
-<div class="blog">
-
-<span>GIS & Remote Sensing</span>
-
-<h3>Using Earth Observation for Climate Hazard Assessment</h3>
-
-<p>
-How satellite observations and GIS can support environmental
-hazard mapping and disaster risk reduction.
-</p>
-
-</div>
-
-
-<div class="blog">
-
-<span>Cryosphere Research</span>
-
-<h3>Understanding GLOF Risk in Mountain Environments</h3>
-
-<p>
-Exploring the role of glacier-fed lakes, terrain, climate and
-community vulnerability in GLOF risk.
-</p>
-
-</div>
-
-
-<div class="blog">
-
-<span>GeoAI</span>
-
-<h3>Explainable Machine Learning for Environmental Research</h3>
-
-<p>
-Using machine learning and explainable AI to improve
-environmental susceptibility modelling.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= COLLABORATION ================= -->
-
-<section>
-
-<div class="container">
-
-<div class="featured" style="text-align:center;">
-
-<h3>Open to Research & Collaboration</h3>
-
-<p>
+<p class="section-intro" style="margin-left:auto;margin-right:auto;">
 I welcome opportunities to collaborate with researchers, universities,
 research groups, environmental organizations and geospatial professionals
-working on climate hazards, Earth Observation, GIS, GeoAI and disaster
-risk reduction.
+working on climate hazards, Earth Observation, GIS, GeoAI and
+disaster risk reduction.
 </p>
 
-<br>
-
 <div class="hero-tags" style="justify-content:center;">
-
 <span class="tag">PhD Opportunities</span>
 <span class="tag">Research Collaboration</span>
 <span class="tag">GIS Projects</span>
 <span class="tag">Remote Sensing</span>
 <span class="tag">Climate Research</span>
 <span class="tag">Environmental Projects</span>
-
 </div>
 
-<br>
-
-<a class="btn btn-primary" href="#contact">
-Let's Collaborate
+<a href="#contact" class="btn btn-primary">
+Let's Collaborate →
 </a>
 
 </div>
-
 </div>
-
 </section>
 
 
-<!-- ================= REFERENCES ================= -->
-
-<section>
-
-<div class="container">
-
-<div class="section-head">
-
-<span class="section-label">Academic Network</span>
-
-<h2>Academic References</h2>
-
-<p>
-Academic mentors and research supervisors.
-</p>
-
-</div>
-
-
-<div class="reference-grid">
-
-<div class="reference">
-
-<h3>Prof. Sumaira Kausar</h3>
-
-<p>Professor of Geography</p>
-
-<p>University of the Punjab</p>
-
-<p><strong>MPhil Thesis Supervisor</strong></p>
-
-<br>
-
-<a class="pub-link"
-href="mailto:sumaira.geog@pu.edu.pk">
-Professional Email →
-</a>
-
-</div>
-
-
-<div class="reference">
-
-<h3>Prof. Safdar Shirazi</h3>
-
-<p>Head of the Institute of Geography</p>
-
-<p>University of the Punjab</p>
-
-<p><strong>Academic Reference</strong></p>
-
-<br>
-
-<a class="pub-link"
-href="mailto:shirazi.geog@pu.edu.pk">
-Professional Email →
-</a>
-
-</div>
-
-
-<div class="reference">
-
-<h3>Dr. Muhammad Nasar-u-Minallah</h3>
-
-<p>Professor of Geography</p>
-
-<p>University of the Punjab</p>
-
-<p><strong>Cryosphere & Climate Research</strong></p>
-
-<br>
-
-<a class="pub-link"
-href="mailto:nasar-u-minallah.geog@pu.edu.pk">
-Professional Email →
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ================= CONTACT ================= -->
-
-<section class="contact" id="contact">
+<!-- CONTACT -->
+<section id="contact" class="contact">
 
 <div class="container">
 
-<div class="section-head">
+<span class="section-label">Get In Touch</span>
 
-<span class="section-label">Let's Connect</span>
+<h2 class="section-title">
+Let's Connect
+</h2>
 
-<h2>Professional Contact</h2>
-
-<p>
+<p class="section-intro">
 For PhD opportunities, research collaborations, GIS and Remote Sensing
 projects, environmental research, academic partnerships, conferences
 and professional opportunities, feel free to connect.
 </p>
 
-</div>
-
-
 <div class="contact-grid">
 
 <div class="contact-card">
 
-<h3>Open to Research & Collaboration</h3>
+<h3 style="font-size:25px;margin-bottom:20px;">
+Research & Professional Contact
+</h3>
 
-<p>
-I am interested in doctoral opportunities, international research
-collaborations, GIS/Remote Sensing projects, climate research,
-GeoAI and environmental applications.
-</p>
-
+<div class="contact-item">
+<div class="contact-icon">📧</div>
+<div>
+<small>Email</small>
 <br>
+<a href="mailto:nazirsabanazirsaba@gmail.com">
+nazirsabanazirsaba@gmail.com
+</a>
+</div>
+</div>
 
-<p>
-<strong>📍 Lahore, Pakistan</strong>
-</p>
+
+<div class="contact-item">
+<div class="contact-icon">💬</div>
+<div>
+<small>WhatsApp</small>
+<br>
+<a href="https://wa.me/923194113516" target="_blank">
++92 319 4113516
+</a>
+</div>
+</div>
+
+
+<div class="contact-item">
+<div class="contact-icon">in</div>
+<div>
+<small>LinkedIn</small>
+<br>
+<a href="https://www.linkedin.com/in/saba-nazirahmad-711b8a387/"
+target="_blank">
+Saba Nazir Ahmad
+</a>
+</div>
+</div>
+
+
+<div class="contact-item">
+<div class="contact-icon">⌘</div>
+<div>
+<small>GitHub</small>
+<br>
+<a href="https://github.com/Saba-Nazir612"
+target="_blank">
+Saba-Nazir612
+</a>
+</div>
+</div>
+
+
+<div class="contact-item">
+<div class="contact-icon">📍</div>
+<div>
+<small>Location</small>
+<br>
+Lahore, Pakistan
+</div>
+</div>
 
 </div>
 
 
 <div class="contact-card">
 
-<h3>Connect With Me</h3>
+<h3 style="font-size:25px;margin-bottom:15px;">
+Academic Network
+</h3>
 
-<div class="contact-links">
+<p><strong>Prof. Sumaira Kausar</strong></p>
+<p>Professor of Geography</p>
+<p>University of the Punjab</p>
+<p>MPhil Thesis Supervisor</p>
 
-<a href="mailto:nazirsabanazirsaba@gmail.com">
-✉️ Email Me
+<br>
+
+<p>
+<a href="mailto:sumaira.geog@pu.edu.pk">
+📧 sumaira.geog@pu.edu.pk
 </a>
+</p>
 
-<a href="https://wa.me/923194113516"
-target="_blank">
-💬 WhatsApp
-</a>
+<hr style="margin:25px 0;border-color:rgba(255,255,255,.15);">
 
-<a href="https://www.linkedin.com/in/saba-nazirahmad-711b8a387/"
-target="_blank">
-🔗 LinkedIn
-</a>
 
-<a href="https://github.com/Saba-Nazir612"
-target="_blank">
-💻 GitHub
+<p><strong>Prof. Safdar Shirazi</strong></p>
+<p>Head of the Institute of Geography</p>
+<p>University of the Punjab</p>
+<p>Academic Reference</p>
+
+<br>
+
+<p>
+<a href="mailto:shirazi.geog@pu.edu.pk">
+📧 shirazi.geog@pu.edu.pk
 </a>
+</p>
+
+<hr style="margin:25px 0;border-color:rgba(255,255,255,.15);">
+
+
+<p><strong>Dr. Muhammad Nasar-u-Minallah</strong></p>
+<p>Professor of Geography</p>
+<p>University of the Punjab</p>
+<p>Cryosphere & Climate Research</p>
+
+<br>
+
+<p>
+<a href="mailto:nasar-u-minallah.geog@pu.edu.pk">
+📧 nasar-u-minallah.geog@pu.edu.pk
+</a>
+</p>
 
 </div>
 
 </div>
 
 </div>
-
-</div>
-
 </section>
 
 
-<!-- ================= FOOTER ================= -->
-
+<!-- FOOTER -->
 <footer>
 
-<div class="container">
+<div class="container footer-grid">
 
-<div class="footer-links">
-
-<a href="https://www.linkedin.com/in/saba-nazirahmad-711b8a387/"
-target="_blank">
-LinkedIn
-</a>
-
-<a href="https://github.com/Saba-Nazir612"
-target="_blank">
-GitHub
-</a>
-
-<a href="mailto:nazirsabanazirsaba@gmail.com">
-Email
-</a>
-
-<a href="https://wa.me/923194113516"
-target="_blank">
-WhatsApp
-</a>
-
-</div>
+<div>
+<strong style="color:white;font-size:18px;">
+Saba Nazir Ahmad
+</strong>
 
 <p>
-<strong>Saba Nazir Ahmad</strong>
-— GIS | Remote Sensing | Earth Observation | Climate Research
+GIS | Remote Sensing | Earth Observation | Climate Research
 </p>
 
-<p style="margin-top:8px;">
+<p style="margin-top:8px;font-size:12px;">
 © 2026 Saba Nazir Ahmad · Academic Research Portfolio
 </p>
+</div>
+
+
+<div class="socials">
+
+<a href="https://www.linkedin.com/in/saba-nazirahmad-711b8a387/"
+target="_blank">in</a>
+
+<a href="https://github.com/Saba-Nazir612"
+target="_blank">GH</a>
+
+<a href="mailto:nazirsabanazirsaba@gmail.com">✉</a>
+
+<a href="https://wa.me/923194113516"
+target="_blank">WA</a>
+
+</div>
 
 </div>
 
@@ -2679,15 +2442,15 @@ WhatsApp
 
 function toggleMenu(){
 
-const menu = document.getElementById("navLinks");
+const menu=document.getElementById("navLinks");
 
 menu.classList.toggle("active");
 
 }
 
-document.querySelectorAll(".nav-links a").forEach(function(link){
+document.querySelectorAll(".nav-links a").forEach(link=>{
 
-link.addEventListener("click",function(){
+link.addEventListener("click",()=>{
 
 document.getElementById("navLinks").classList.remove("active");
 
